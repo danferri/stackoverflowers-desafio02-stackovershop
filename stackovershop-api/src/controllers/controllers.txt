@@ -1,4 +1,0 @@
-aqui ficam os controlles:
-
-- CreatePlantController.ts
-- ListPlantsController.ts
