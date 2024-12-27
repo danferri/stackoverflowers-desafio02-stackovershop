@@ -24,6 +24,7 @@ model Plant {
   features         String
   description      String
   imgUrl           String
+  plantType           String
   created_at DateTime? @default(now())
   update_at DateTime? @default(now())
 

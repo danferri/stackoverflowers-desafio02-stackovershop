@@ -5,7 +5,7 @@ class createPlantController {
 
     async handle(request: FastifyRequest, reply: FastifyReply){
 
-        const {name, subtitle, labels, price, isInSale, discountPercentage, features, description, imgUrl} = request.body as {name: string, subtitle: string, labels: [string], price: number, isInSale: boolean, discountPercentage: number, features: string, description: string, imgUrl:string}
+        const {name, subtitle, labels, price, isInSale, discountPercentage, features, description, imgUrl, plantType} = request.body as {name: string, subtitle: string, labels: [string], price: number, isInSale: boolean, discountPercentage: number, features: string, description: string, imgUrl:string, plantType:string}
         console.log(name)
         console.log(subtitle)
         console.log(labels)
@@ -15,11 +15,12 @@ class createPlantController {
         console.log(features)
         console.log(description)
         console.log(imgUrl)
+        console.log(plantType)
 
 
         const plantService = new CreatePlantService();
 
-        const plant = await plantService.execute({name,subtitle,labels,price,isInSale,discountPercentage,features,description,imgUrl});
+        const plant = await plantService.execute({name,subtitle,labels,price,isInSale,discountPercentage,features,description,imgUrl,plantType});
 
         reply.send(plant);
     }   

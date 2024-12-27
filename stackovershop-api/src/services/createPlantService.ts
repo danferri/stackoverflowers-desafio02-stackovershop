@@ -10,13 +10,14 @@ interface CreatePlantsProps{
     features :        string
     description   :   string
     imgUrl       :    string
+    plantType   :     string
 }
 
 
 class CreatePlantService{
    
 
-    async execute({name,subtitle,labels,price,isInSale,discountPercentage,features,description,imgUrl}: CreatePlantsProps){
+    async execute({name,subtitle,labels,price,isInSale,discountPercentage,features,description,imgUrl,plantType}: CreatePlantsProps){
 
         if(!name || !subtitle){
             throw new Error("Prencha todos os campos");
@@ -32,7 +33,8 @@ class CreatePlantService{
                 discountPercentage,
                 features,
                 description,
-                imgUrl
+                imgUrl,
+                plantType
             }
         })
 
