@@ -1,0 +1,28 @@
+# Dependências do Node.js
+node_modules/
+package-lock.json
+
+# Arquivos de Build do TypeScript
+dist/
+
+# Configurações do Sistema Operacional
+.DS_Store
+Thumbs.db
+
+# Logs e Relatórios
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.log
+
+# Banco de Dados MongoDB (Local)
+*.db
+*.sqlite
+
+# Configurações de Ambiente
+.env
+
+# Arquivos temporários do editor
+.vscode/
+.idea/
+*.swp
