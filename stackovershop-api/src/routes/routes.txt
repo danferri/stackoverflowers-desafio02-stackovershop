@@ -1,1 +1,3 @@
 Aqui ficam os arquivos de rotas
+
+aqui fica o routes.ts, mas seria legal chamar tipo platssRoutes.ts

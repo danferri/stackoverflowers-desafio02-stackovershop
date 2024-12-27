@@ -1,0 +1,1 @@
+// configuração principal do servidor
