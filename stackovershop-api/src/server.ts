@@ -3,7 +3,8 @@ import Fastify from 'fastify'
 import cors from '@fastify/cors'
 import { alwaysValidSchema } from 'ajv/dist/compile/util';
 import { plantsRoutes } from './routes/plantsRoutes';
-import { plantTypesRoutes } from './routes/plantTypes';
+import { createPlantTypeRoutes } from './routes/creatPlantTypeRoute';
+import { listPlantTypesRoutes } from './routes/listPlantTypesRoutes';
 
 
 
@@ -13,7 +14,8 @@ const start = async () => {
     
     await app.register(cors);
     await app.register(plantsRoutes);
-    await app.register(plantTypesRoutes);
+    await app.register(createPlantTypeRoutes);
+    await app.register(listPlantTypesRoutes);
 
     try{
         await app.listen({port: 5000})
