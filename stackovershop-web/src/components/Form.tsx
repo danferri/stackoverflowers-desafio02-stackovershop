@@ -1,6 +1,6 @@
 import {useForms} from '../hooks/useForms';
 import { FormSchema } from '../schemas/formSchema';
-
+import img from '../assets/img/image 21.png';
 const Form = () => {
   const {register, handleSubmit, errors} = useForms();
 
@@ -8,8 +8,8 @@ const Form = () => {
     console.log(data);
 //alterar depois para isso enviar ao backend, via fech ou axios
   }
-  return (
-  <form onSubmit={handleSubmit(onSubmit)} className='wd-96 bg-white p-4 rounded-md border slate-300'>
+  return (<section className='containerSectionForm'>
+  <form onSubmit={handleSubmit(onSubmit)}>
 {/* name */}
     <div className='flex flex-col gap-2 md-2'>
     <label htmlFor='name'>Plant Name</label>
@@ -79,6 +79,10 @@ const Form = () => {
      </div>
      <button type='submit' className='w-full h-11 bg-cyan-400 rounded-md my-2 hover:bg-cyan-500 transition-all'>Register</button>
   </form>
+  <aside className='containerImgForm'>
+
+  </aside>
+  </section>
   )
 }
 
