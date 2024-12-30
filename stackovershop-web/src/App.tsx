@@ -1,35 +1,28 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import {Routes, Route, Link, BrowserRouter,} from "react-router-dom"
+import Form from "./components/Form";
+import './index.css'
+import AxioProducts from "./components/AxioProducts"
+
+
+
 
 function App() {
-  const [count, setCount] = useState(0)
 
-  return (
-    <>
+
+
+  return ( <BrowserRouter>
+ 
+    <article className="bg-zinc-100 min-h-screen w-full flex flex-col items-center gap-6 pt-8">
+      <h1 className="font-bold text-3xl">Somenthing Form </h1>
+      <Form />
+      <h1>The Plants on sale</h1>
       <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+        <Link to="/axio-data">Plants</Link>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
-
+    </article>
+     <Routes>
+    <Route path="/axio-data" element={<AxioProducts/>}/>
+    </Routes>
+  </BrowserRouter>)
+  }
 export default App
