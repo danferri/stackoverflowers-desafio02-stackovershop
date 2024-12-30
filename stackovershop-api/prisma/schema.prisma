@@ -29,3 +29,10 @@ model Plant {
 
   @@map("Plants")
 }
+
+model PlantType {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+  plantType String
+
+  @@map("PlantType")
+}
