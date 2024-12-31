@@ -1,7 +1,7 @@
 import {useForms} from '../hooks/useForms';
 import { FormSchema } from '../schemas/formSchema';
 import img from '../assets/img/image-21.png';
-import AxioProducts from './AxioProducts';
+import axios from 'axios';
 
 const Form = () => {
   const {register, handleSubmit, errors} = useForms();
@@ -9,8 +9,14 @@ const Form = () => {
   const onSubmit = (data : FormSchema) => {
   console.log(data)
 //alterar depois para isso enviar ao backend, via fech ou axios
+
   }
-  return (<section className='sectionForm FormFont  '>
+  return (<section className='sectionForm FormFont  containerImgForm' style={{
+    backgroundImage: `url(${img})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+   
+  }}>
   <form onSubmit={handleSubmit(onSubmit)} className='containerSectionForm ,Form'  >
     <div className='belowTitle'>
   <h1 className="FormTitle">Plant registration </h1>
@@ -58,7 +64,7 @@ const Form = () => {
      </div>
 {/* price */}
      <div className='formGaps'>
-    <label htmlFor=' price'>Dicount percentage</label>
+    <label htmlFor=' price'>Price</label>
     <input className='' type='text' 
     id=' price'
      placeholder='50$'{...register('price', {
@@ -94,13 +100,7 @@ const Form = () => {
      </div>
      <button type='submit' className='formButton'>Register</button>
   </form>
-  <aside className='containerImgForm' style={{
-          backgroundImage: `url(${img})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-         
-        }}>     
-  </aside>
+
   </section>
   )
 }

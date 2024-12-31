@@ -3,19 +3,25 @@ body{background-color: #F0F1EE;
 margin: 1rem;
 padding: 1rem;}
 
+
+.articleForm{display:flex;
+flex-flow: column wrap;
+height: auto;
+width:auto ;
+}
+
 .sectionForm{display: grid;
   grid-template-columns: 1fr 2fr;
   flex-flow: column wrap;
-
 }
 
 .containerSectionForm{
-
 align-content: center;
 min-height: 100vh;
 width: 100%;
-text-align: center;
+text-align: left;
 padding: 50px;
+margin-bottom: 20%;
 }
 
 .FormFont{font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
@@ -32,13 +38,14 @@ padding: 50px;
 
 .Form{width: 80vw;
   height: 100vh;
- 
+
 }
 
 form input{border: 0.1rem solid #AFB2AA;
 width: 16rem;
 height: 2rem;
 border-radius: 0.2rem;
+margin: 5%;
 }
 
 .formRadio{flex-flow: row wrap;
@@ -51,11 +58,13 @@ form input[type="radio"] {
   height: 1rem;
   border-radius: 50%;
   text-align: left;  
-  
+ margin-top: 3%;
+margin: 1%;
 }
 
 .formGaps{padding: 1.7rem;
   font-weight:500;
+
 
 }
 .formButton{background-color: #354735;
@@ -66,11 +75,48 @@ width: 70%;
 height: 6%;}
 
 .containerImgForm{
-  flex-flow: column wrap;
-align-self:flex-start;
+  flex-flow: row wrap;
+align-self:flex-end;
 height: 100%;
-width: 100%;
+width: 80%;
 
 }
 
 .error{color: red;}
+
+
+/*-------------------------------------------------------------------  */
+
+.footerSection{background-color: #354735;
+display:flex;
+flex-flow: column wrap;
+height: 22vmax;
+color: #F0F1EE;
+padding: 2%;}
+
+
+.distance{ width: 20vmax;
+  height: 5vmax;
+  padding: 3.8vmin}
+
+.footerTitle{
+font-family: Georgia, Times, 'Times New Roman', serif;
+font-size: 2.4vmax;
+
+}
+
+.subTitle{font-size: 0.7vmax;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.littlePlant{display: grid;
+grid-template-columns:1fr 1fr;
+}
+
+.littlePlantIcon{
+  justify-content: end;}
+
+.rigths{
+  justify-content: end;
+}

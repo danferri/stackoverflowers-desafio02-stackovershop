@@ -1,4 +1,5 @@
 import {useState, useEffect} from "react";
+import {formSchema} from '../schemas/formSchema';
 import axios from "axios";
 
 const AxioProducts = () => {
@@ -10,7 +11,7 @@ useEffect(()=> {
   const fetchProducts = async() => {
     try{
 const response = await axios.get(
-  "localhost:5000/plantsList");
+  "http://localhost:5000/plantsList");
 
 setProducts(response.data)
 
@@ -33,6 +34,11 @@ setProducts(response.data)
           <section key={product.id}>
             <h2>{product.name}</h2>
             <h2>{product.subtitle}</h2>
+            <h2>{product.label}</h2>
+            <h2>{product.price}</h2>
+            <h2>{product.discountPercentage}</h2>
+            <h2>{product.features}</h2>
+            <h2>{product.description}</h2>
           </section>
 
         )) 
