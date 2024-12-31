@@ -1,5 +1,0 @@
-aqui ficam os serviços do projeto, os arquivos:
-
-- CreatePlatService.ts
-- ListPlantsService.ts
-

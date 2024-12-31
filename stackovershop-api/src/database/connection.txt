@@ -1,3 +1,0 @@
-aqui fica a conecxão com o mongo db
-
-aqui é para ficar o Prisma/index.ts mas seria melhor renomea-lo para connection.ts

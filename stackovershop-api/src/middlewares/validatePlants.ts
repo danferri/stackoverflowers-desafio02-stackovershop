@@ -5,7 +5,11 @@ import prismaClient from "../database/connection";
 const plantSchema = yup.object().shape({
     name: yup.string().required("The name is required."),
     subtitle: yup.string().required("Subtitle is required."),
-    labels: yup.array().of(yup.string()).required("Labels are required."),
+    labels: yup
+        .array()
+        .of(yup.string()).required("Labels are required.")
+        .min(1, "Must contain one label at least")
+        .required("Label are required"),
     price: yup
         .number()
         .typeError("The price must be a number.")
@@ -23,15 +27,17 @@ const plantSchema = yup.object().shape({
 export const validatePlant = async (request: FastifyRequest, reply: FastifyReply) => {
     try {
         await plantSchema.validate(request.body, { abortEarly: false });
-
+        return false;
     } catch (error) {
-        if (error instanceof yup.ValidationError) {
+        if (error instanceof yup.ValidationError) {            
             const errors = error.inner.map((err) => ({
                 path: err.path,
                 message: err.message,
             }));
-            return reply.status(400).send({ errors });
+            reply.status(400).send({ errors });
+            return true;
         }
-        return reply.status(500).send({ error: "Unexpected error during validation." });
+        reply.status(500).send({ error: "Unexpected error during validation." });
+        return true;
     }
 };
