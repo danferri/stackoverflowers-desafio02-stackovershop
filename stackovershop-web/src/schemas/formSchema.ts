@@ -12,7 +12,8 @@ export const formSchema = z.object({
         message: "You need to select the correct ambient for the plant",
       }),
     }),
-    
+    price: z.number()
+    .min(5,"The price must be above 5$"),
    // isInSale: z.boolean(true){
     //    message: "You can only register a plant that you already have"
     //}),

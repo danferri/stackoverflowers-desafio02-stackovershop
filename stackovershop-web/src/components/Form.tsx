@@ -1,12 +1,13 @@
 import {useForms} from '../hooks/useForms';
 import { FormSchema } from '../schemas/formSchema';
 import img from '../assets/img/image-21.png';
+import AxioProducts from './AxioProducts';
 
 const Form = () => {
   const {register, handleSubmit, errors} = useForms();
 
   const onSubmit = (data : FormSchema) => {
-    console.log(data);
+  console.log(data)
 //alterar depois para isso enviar ao backend, via fech ou axios
   }
   return (<section className='sectionForm FormFont  '>
@@ -55,30 +56,40 @@ const Form = () => {
    </div>
      {errors.label && <small className='error'>{errors.label.message}</small>}
      </div>
+{/* price */}
+     <div className='formGaps'>
+    <label htmlFor=' price'>Dicount percentage</label>
+    <input className='' type='text' 
+    id=' price'
+     placeholder='50$'{...register('price', {
+      valueAsNumber: true
+    })} typeof='number'></input>
+     {errors.price && <small className='error'>{errors.price.message}</small>}
+     </div>
 {/* discountPercentage*/}
-     <div className=''>
+     <div className='formGaps'>
     <label htmlFor=' discountPercentage'>Dicount percentage</label>
-    <input className='h-10 pl-2 rounded-md border border-slate-300' type='text' 
+    <input className='' type='text' 
     id=' discountPercentage'
      placeholder='20$'{...register('discountPercentage', {
       valueAsNumber: true
     })} typeof='number'></input>
-     {errors. discountPercentage && <small className='error'>{errors. discountPercentage.message}</small>}
+     {errors.discountPercentage && <small className='error'>{errors.discountPercentage.message}</small>}
      </div>
 {/* features */}
 <div className='formGaps'>
     <label htmlFor='features'>Plant Features</label>
-    <input className='' type='text' 
+    <textarea className='' cols={50} rows={6}
     id='features'
-     placeholder='Needs very little water'{...register('features')}></input>
+     placeholder='Needs very little water'{...register('features')}></textarea>
      {errors.features && <small className=''>{errors.features.message}</small>}
      </div>
      {/* description */}
 <div className='formGaps'>
     <label htmlFor='description'>Plant Description</label>
-    <input className='' type='text' 
+    <textarea className='' cols={50} rows={6} 
     id='description'
-     placeholder='The Plant is from...'{...register('description')}></input>
+     placeholder='The Plant is from...'{...register('description')}></textarea>
      {errors.description && <small className=''>{errors.description.message}</small>}
      </div>
      <button type='submit' className='formButton'>Register</button>
@@ -87,6 +98,7 @@ const Form = () => {
           backgroundImage: `url(${img})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
+         
         }}>     
   </aside>
   </section>

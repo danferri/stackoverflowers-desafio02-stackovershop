@@ -4,7 +4,8 @@ import {FormSchema , formSchema} from "../schemas/formSchema";
 
 export const useForms = () => {
 
-    const {register , handleSubmit , formState:{errors} } = useForm<FormSchema>({
+    const {register , handleSubmit , 
+        formState:{errors} } = useForm<FormSchema>({
         resolver:zodResolver(formSchema),
     });
 
