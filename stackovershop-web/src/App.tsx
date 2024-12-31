@@ -12,8 +12,7 @@ function App() {
 
   return ( <BrowserRouter>
  
-    <article className="bg-zinc-100 min-h-screen w-full flex flex-col items-center gap-6 pt-8">
-      <h1 className="font-bold text-3xl">Somenthing Form </h1>
+    <article className="">
       <Form />
       <h1>The Plants on sale</h1>
       <div>
