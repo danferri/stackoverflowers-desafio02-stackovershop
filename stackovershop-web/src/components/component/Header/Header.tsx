@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter, Link } from "react-router-dom";
 import PlantLogo from "../assets/PlantLogo.svg";
 import {SignedIn, SignedOut, SignInButton, UserButton} from "@clerk/clerk-react";
 import "bootstrap/dist/css/bootstrap.min.css";
