@@ -3,7 +3,7 @@ import Fastify from 'fastify'
 import cors from '@fastify/cors'
 import { alwaysValidSchema } from 'ajv/dist/compile/util';
 import { plantsRoutes } from './routes/plantsRoutes';
-import { createPlantTypeRoutes } from './routes/creatPlantTypeRoute';
+import { createPlantTypeRoutes } from './routes/createPlantTypeRoute';
 import { listPlantTypesRoutes } from './routes/listPlantTypesRoutes';
 
 
