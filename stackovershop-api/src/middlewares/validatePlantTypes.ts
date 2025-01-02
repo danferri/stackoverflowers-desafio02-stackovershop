@@ -10,8 +10,8 @@ const plantTypeSchema = yup.object().shape({
             yup.object().shape({
                 id: yup
                     .string()
-                    .required("Each label must have an id."),
-                    //.test("is-objectid", "Invalid id format.", (value) => ObjectId.isValid(value)),
+                    .required("Each label must have an id.")
+                    .test("is-objectid", "Invalid id format.", (value) => ObjectId.isValid(value)),
                 plantType: yup.string().required("Each label must have a plantType."),
             })
         )
