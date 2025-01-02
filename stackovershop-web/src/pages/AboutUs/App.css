@@ -1,0 +1,152 @@
+#users {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem; /* Aumentei o gap entre os colaboradores */
+    max-width: 80%;
+    margin: 0 auto;
+  }
+  
+  .user_profile {
+    background-color: #354733;
+    width: 55%;
+    height: 22rem;
+    border-radius: 2rem;
+    box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    padding: 1.5rem; /* Aumentei o padding para dar mais espaço interno */
+  }
+  
+  #user_photo {
+    width: 9rem;
+    height: 9rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem; /* Aumentei o espaçamento entre a imagem e o texto */
+  }
+  
+  #social-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem; /* Aumentei o espaço entre as redes sociais */
+    align-items: center;
+  }
+  
+  .social {
+    max-width: 1.5rem; /* Aumentei o tamanho dos ícones sociais */
+  }
+  
+  .social + span {
+    margin-left: 0.3rem;
+    color: #F0F1EE;
+    display: inline-block;
+  }
+  
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.2rem;
+    text-decoration: none;
+  }
+  
+  h2, #loc {
+    color:  #F0F1EE;
+  }
+  
+  body {
+    background-color: #F0F1EE;
+  }
+  
+  #github {
+    background-color: white;
+    border-radius: 1rem;
+  }
+  
+  #title-au {
+    font-family: 'EB Garamond';
+    font-style: normal;
+    font-size: 2.3rem;
+    display: flex;
+    align-items: center;
+    text-transform: capitalize;
+    color: #354733;
+    margin-bottom: 1rem; /* Aumentei o espaçamento abaixo do título */
+  }
+  
+  #text-au {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-size: 1.6rem;
+    line-height: 154.5%;
+    display: flex;
+    align-items: center;
+    color: #808276;
+    margin-bottom: 1.2rem; /* Aumentei o espaçamento abaixo do texto */
+  }
+  
+  #subtitle-au {
+    font-family: 'EB Garamond';
+    font-style: normal;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    text-transform: capitalize;
+    color: #354733;
+  }
+  
+  @media (max-width: 768px) {
+    #users {
+      flex-direction: column;
+      max-width: 90%;
+    }
+  
+    .user_profile {
+      width: 100%;
+      height: auto;
+      padding: 1.5rem; /* Aumentei o padding para telas menores */
+    }
+  
+    #user_photo {
+      width: 7.5rem; /* Ajustei o tamanho da imagem */
+      height: 7.5rem;
+      margin-bottom: 1rem;
+    }
+  
+    #title-au {
+      font-size: 2.1rem;
+      text-align: center;
+      margin-bottom: 1rem; /* Espaço abaixo do título */
+    }
+  
+    #text-au {
+      font-size: 1.3rem;
+      margin-bottom: 1rem; /* Espaço abaixo do texto */
+    }
+  
+    #subtitle-au {
+      font-size: 2rem;
+      text-align: center;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    #title-au {
+      font-size: 1.8rem;
+      margin-bottom: 1rem; /* Espaço abaixo do título */
+    }
+  
+    #text-au {
+      font-size: 1rem;
+      margin-bottom: 1rem; /* Espaço abaixo do texto */
+    }
+  
+    #subtitle-au {
+      font-size: 1.6rem;
+    }
+  }
+  
