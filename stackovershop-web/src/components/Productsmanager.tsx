@@ -7,6 +7,7 @@ const Productsmanager = () => {
   const [error, setError] = useState("");
 
   const handleSuccess = (product: any) => {
+    console.log("New product added:", product);
     setProducts((currentProducts) => [product, ...currentProducts]);
   };
 
@@ -14,8 +15,10 @@ const Productsmanager = () => {
     const fetchProducts = async () => {
       try {
         const response = await axios.get('http://localhost:5000/plantsList');
+        console.log("Fetched products:", response.data);
         setProducts(response.data);
       } catch (error) {
+        console.error("Error fetching products:", error);
         setError(error.message);
       }
     };

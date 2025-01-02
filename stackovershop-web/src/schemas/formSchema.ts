@@ -23,7 +23,7 @@ export const formSchema = z.object({
 
     features: z.string().min(5, "The features must have more than 5 letters"),
     description: z.string().min(5, "The description must have more than 5 letters"),
-  //  imgUrl:, here there will be a default image
+    imgUrl: z.string()
    
     
 });

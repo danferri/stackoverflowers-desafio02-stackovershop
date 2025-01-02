@@ -23,7 +23,7 @@ function App() {
       </div>
     </article>
      <Routes>
-    <Route path="/form" element={<Form onSuccess={handleSuccess}/>}/>
+    <Route path="/form" element={<Form onSuccess={Form}/>}/>
     <Route path="/axio-data" element={<AxioProducts/>}/>
     <Route path="/products" element={<Productsmanager/>}/>
     </Routes>

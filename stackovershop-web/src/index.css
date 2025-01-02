@@ -61,6 +61,7 @@ form input[type="radio"] {
   text-align: left;  
  margin-top: 3%;
 margin: 1%;
+cursor: pointer;
 }
 
 .formGaps{padding: 1.7rem;
@@ -73,7 +74,8 @@ color:#FCFCFC;
 border:none;
 border-radius: 0.2rem;
 width: 70%;
-height: 6%;}
+height: 6%;
+cursor: pointer;}
 
 .containerImgForm{
   flex-flow: row wrap;

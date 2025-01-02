@@ -1,5 +1,5 @@
 import patterFooter from '../assets/img/footer.png';
-
+import littlePlant from '../assets/Group 25.svg';
 
 const Footer = () => {
   return (
@@ -40,7 +40,7 @@ const Footer = () => {
       
       <div  className='littlePlantIcon'>
               <img src={littlePlant} id='littlePlant'></img>
-                <label htmlFor='littlePlant'>PlantPeace</label>
+                <p>PlantPeace</p>
                 </div>
                 <div className='rigths'>
               <p>compassinhos ®. All rigths reserved.</p>

@@ -14,7 +14,9 @@ const Form = ({ onSuccess }: FormProps) => {
     try {
       const response = await axios.post('http://localhost:5000/plantsList', data);
       console.log('Product successfully sent to backend:', response.data);
+
       onSuccess(response.data);
+
     } catch (error) {
       console.error('Error sending product to backend:', error);
     }
@@ -26,7 +28,7 @@ const Form = ({ onSuccess }: FormProps) => {
     backgroundPosition: 'center',
    
   }}>
-  <form onSubmit={handleSubmit(onSubmit)} className='containerSectionForm ,Form'  >
+  <form onClick={handleSubmit(onSubmit)} className='containerSectionForm ,Form'  >
     <div className='belowTitle'>
   <h1 className="FormTitle">Plant registration </h1>
   </div>
@@ -58,24 +60,23 @@ const Form = ({ onSuccess }: FormProps) => {
      {errors.plantType && <small className='error'>{errors.plantType.message}</small>}
      </div>
 {/* label */}
-<div className='formGaps formRadio' >
-    <label htmlFor='label'>Label</label><div id=' label'>
-    <label>
-            <input type="radio" value="indoor" {...register("label")} />
-            Indoor
-          </label>
-          <label>
-            <input type="radio" value="outdoor" {...register("label")} />
-            Outdoor
-          </label>
-   </div>
-     {errors.label && <small className='error'>{errors.label.message}</small>}
-     </div>
+    <div className="formGaps formRadio">
+      <span>Label</span>
+      <label>
+        <input type="radio" value="indoor" {...register("label")} />
+        Indoor
+      </label>
+      <label>
+        <input type="radio" value="outdoor" {...register("label")} />
+        Outdoor
+      </label>
+      {errors.label && <small className="error">{errors.label.message}</small>}
+    </div>
 {/* price */}
      <div className='formGaps'>
-    <label htmlFor=' price'>Price</label>
+    <label htmlFor='price'>Price</label>
     <input className='' type='text' 
-    id=' price'
+    id='price'
      placeholder='50$'{...register('price', {
       valueAsNumber: true
     })} typeof='number'></input>
@@ -83,9 +84,9 @@ const Form = ({ onSuccess }: FormProps) => {
      </div>
 {/* discountPercentage*/}
      <div className='formGaps'>
-    <label htmlFor=' discountPercentage'>Dicount percentage</label>
+    <label htmlFor='discountPercentage'>Dicount percentage</label>
     <input className='' type='text' 
-    id=' discountPercentage'
+    id='discountPercentage'
      placeholder='20$'{...register('discountPercentage', {
       valueAsNumber: true
     })} typeof='number'></input>
