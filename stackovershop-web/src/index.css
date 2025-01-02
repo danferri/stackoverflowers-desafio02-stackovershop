@@ -1,13 +1,14 @@
 body{background-color: #F0F1EE;
   align-content: center;
-margin: 1rem;
-padding: 1rem;}
+}
 
 
 .articleForm{display:flex;
 flex-flow: column wrap;
 height: auto;
-width:auto ;
+width: auto;
+align-content: center;
+
 }
 
 .sectionForm{display: grid;
@@ -107,11 +108,14 @@ font-size: 2.4vmax;
 
 .subTitle{font-size: 0.7vmax;
   font-family: Arial, Helvetica, sans-serif;
+
 }
 
 
-.littlePlant{display: grid;
-grid-template-columns:1fr 1fr;
+.littlePlant{display: flex ;
+  margin-top: 2rem;
+justify-content: space-between;
+width: 90vw;
 }
 
 .littlePlantIcon{
@@ -120,3 +124,4 @@ grid-template-columns:1fr 1fr;
 .rigths{
   justify-content: end;
 }
+

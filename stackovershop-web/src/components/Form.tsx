@@ -7,7 +7,7 @@ const Form = () => {
   const {register, handleSubmit, errors} = useForms();
 
   const onSubmit = (data : FormSchema) => {
-  console.log(data)
+
 //alterar depois para isso enviar ao backend, via fech ou axios
 
   }

@@ -1,5 +1,5 @@
 import patterFooter from '../assets/img/footer.png';
-import littlePlant from '../assets/Group 25.svg';
+import PlantIcon from './PlantIcon';
 
 const Footer = () => {
   return (
@@ -11,31 +11,33 @@ const Footer = () => {
       }}>
         <div className='distance'>
         <h1 className='footerTitle'>Stay Fresh</h1>
-             <div className='subTitle'>
+             <div className='subTitle' >
                 <p>compassinhos@gmail.com</p>
-                <p>+55 41 9999-9999</p><div>
-
+                <p>+55 41 9999-9999</p>
+    <PlantIcon />
              </div>
-         </div>
-     </div>
-     <section className='littlePlant'>
-        <div  className='littlePlantIcon'>
-                <img src={littlePlant} id='littlePlant'></img>
-                  <label htmlFor='littlePlant'>PlantPeace</label>
-                  </div>
-                  <div className='rigths'>
-                <p>compassinhos ®. All rigths reserved.</p>
-                </div>
+     </div >
+     <div  style={{display:'grid',
+      gridTemplateColumns:'1fr 1fr 1fr 1fr 1fr ',}}>
+     <section style={{gridColumn:'5',
+      
+     }}>
+
+     <h3 >Links</h3>
+      <p>About Us</p>
+      <p>Products</p>
+      <p>Blogs</p>
       </section>
-        <h3>Links</h3>
-            <p>About Us</p>
-            <p>Products</p>
-            <p>Blogs</p>
-        <h3>Community</h3>
-            <p>About Us</p>
-            <p>Products</p>
-            <p>Blogs</p>
-            
+    <section  style={{gridColumn:'6',}}>
+        <h3>Comunnity</h3>
+    
+      <p>About Us</p>
+      <p>Products</p>
+      <p>Blogs</p>
+</section>
+</div>
+
+
 
     </section>
   )

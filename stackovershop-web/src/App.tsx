@@ -14,16 +14,17 @@ function App() {
   return ( <BrowserRouter>
  
     <article className="articleForm">
-      <Form />
+ 
       <h1>The Plants on sale</h1>
       <div>
         <Link to="/axio-data">Plants</Link>
       </div>
     </article>
      <Routes>
+    <Route path="/form" element={<Form/>}/>
     <Route path="/axio-data" element={<AxioProducts/>}/>
-    <Route path="/footer" element={<Footer/>}/>
     </Routes>
+    <footer><Footer/></footer>
   </BrowserRouter>)
   }
 export default App
