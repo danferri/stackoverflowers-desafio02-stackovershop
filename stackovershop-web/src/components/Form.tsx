@@ -3,17 +3,23 @@ import { FormSchema } from '../schemas/formSchema';
 import img from '../assets/img/image-21.png';
 import axios from 'axios';
 
-const Form = () => {
-  const {register, handleSubmit, errors} = useForms();
+const Form = ({onSuccess}) => {
+  const { register, handleSubmit, errors } = useForms();
 
-  const onSubmit = (data : FormSchema) => {
-   const newProduct = {data , product.id}
-   try{
-    const response = axios.post('/plantsList', newProduct)
+  const onSubmit = async (data: FormSchema) => {
+    const newProduct = { ...data, id: product.id };
+    register(newProduct);
+    try {
+      const response = await axios.post('/plantsList', newProduct);
+      console.log('Product successfully sent to backend:', response.data);
+     
+      onSuccess(response.data , 'add')
 
-    
-   }
-//alterar depois para isso enviar ao backend, via fech ou axios
+    } catch (error) {
+      console.error('Error sending product to backend:', error);
+    }
+  };
+
 
   }
   return (<section className='sectionForm FormFont  containerImgForm' style={{
