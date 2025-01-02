@@ -3,7 +3,7 @@ import * as yup from "yup";
 import prismaClient from "../database/connection";
 import { ObjectId } from "mongodb";
 
-const plantLabelsSchema = yup.object().shape({
+const plantTypeSchema = yup.object().shape({
     labels: yup
         .array()
         .of(
@@ -23,7 +23,7 @@ export const validatePlantTypes = async (request: FastifyRequest, reply: Fastify
     try {
         const { labels } = request.body as { labels: { id: string; plantType: string }[] };
 
-        await plantLabelsSchema.validate({ labels }, { abortEarly: false });
+        await plantTypeSchema.validate({ labels }, { abortEarly: false });
 
         const invalidLabels: { id: string; plantType: string }[] = [];
         for (const label of labels) {
