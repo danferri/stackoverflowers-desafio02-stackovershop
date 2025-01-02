@@ -14,9 +14,8 @@ export const formSchema = z.object({
     }),
     price: z.number()
     .min(5,"The price must be above 5$"),
-   // isInSale: z.boolean(true){
-    //    message: "You can only register a plant that you already have"
-    //}),
+
+     isInSale: z.boolean(),
    
     discountPercentage: z.number()
     .min(2, "The discount needs to be at least 2")

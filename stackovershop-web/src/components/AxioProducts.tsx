@@ -1,6 +1,6 @@
 import {useState, useEffect} from "react";
-import {formSchema} from '../schemas/formSchema';
 import axios from "axios";
+
 
 const AxioProducts = () => {
 

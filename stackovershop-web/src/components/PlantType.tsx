@@ -1,11 +1,11 @@
-import axios from "axios"; 
+// import axios from "axios"; 
 
-const PlantType = () => {
-  return (
-    <div>
+// const PlantType = () => {
+//   return (
+//     <div>
       
-    </div>
-  )
-}
+//     </div>
+//   )
+// }
 
-export default PlantType
+// export default PlantType
