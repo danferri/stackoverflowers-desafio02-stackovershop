@@ -10,7 +10,7 @@ generator client {
 
 datasource db {
   provider = "mongodb"
-  url      = env("DATABASE_URL")
+  url      = "mongodb+srv://devPedro:pedro123456@stackovershop.2ou41.mongodb.net/StackOverShop?retryWrites=true&w=majority&appName=StackOverShop"
 }
 
 model Plant {
@@ -31,7 +31,7 @@ model Plant {
 }
 
 model PlantType {
-  id String  @id @default(auto()) @map("_id") @db.ObjectId
+  id        String    @id @default(auto()) @map("_id") @db.ObjectId
   plantType String
 
   @@map("PlantType")
