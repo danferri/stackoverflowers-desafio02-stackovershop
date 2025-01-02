@@ -7,7 +7,12 @@ const Form = () => {
   const {register, handleSubmit, errors} = useForms();
 
   const onSubmit = (data : FormSchema) => {
+   const newProduct = {data , product.id}
+   try{
+    const response = axios.post('/plantsList', newProduct)
 
+    
+   }
 //alterar depois para isso enviar ao backend, via fech ou axios
 
   }
@@ -24,7 +29,7 @@ const Form = () => {
 {/* name */}
     <div className='formGaps'>
     <label htmlFor='name'>Plant Name</label>
-    <input className='' type='text' 
+    <input className='' type='text'  onChange={(e) => name(e.target)}
     id='name'
      placeholder='Echinocereus Cactus'{...register('name')}></input>
      {errors.name && <small className='error'>{errors.name.message}</small>}

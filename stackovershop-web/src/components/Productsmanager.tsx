@@ -1,11 +1,16 @@
-import {useState, useEffect} from "react";
-import axios from "axios";
+import {useState , useEffect} from 'react';
+import axios from 'axios';
 
 
-const AxioProducts = () => {
+const Productsmanager = () => {
 
+    
   const [products , setProducts ]= useState([]);
   const [error, setError] = useState("");
+
+const handleSuccess = (product , operation) => {
+    if(operation === 'add')
+}
 
 useEffect(()=> {
   const fetchProducts = async() => {
@@ -24,12 +29,10 @@ setProducts(response.data)
   fetchProducts();
 }, []);
 
-  
   return (
     <div>
-      <h1>Products(Axios)</h1>
-      {error ? (<p>Erro: {error}</p>
-      ) : (  
+     <h1> Product</h1>
+     {
         products.map((product) => (
           <section key={product.id}>
             <h2>{product.name}</h2>
@@ -42,11 +45,9 @@ setProducts(response.data)
           </section>
 
         )) 
-      )}
-      
-       
+      }
     </div>
-  );
-};
+  )
+}
 
-export default AxioProducts
+export default Productsmanager

@@ -1,5 +1,5 @@
 import patterFooter from '../assets/img/footer.png';
-import PlantIcon from './PlantIcon';
+
 
 const Footer = () => {
   return (
@@ -14,7 +14,19 @@ const Footer = () => {
              <div className='subTitle' >
                 <p>compassinhos@gmail.com</p>
                 <p>+55 41 9999-9999</p>
-    <PlantIcon />
+                <section>
+    <footer className='littlePlant'>
+      
+      <div  className='littlePlantIcon'>
+              <img src={littlePlant} id='littlePlant'></img>
+                <label htmlFor='littlePlant'>PlantPeace</label>
+                </div>
+                <div className='rigths'>
+              <p>compassinhos ®. All rigths reserved.</p>
+              </div>
+   
+   </footer> 
+   </section>
              </div>
      </div >
      <div  style={{display:'grid',
