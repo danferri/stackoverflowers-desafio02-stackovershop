@@ -1,5 +1,6 @@
 import React from 'react';
 import './Footer.css';
+import plantIcon from '/src/assets/fotos/plant_icon.png'
 
 const Footer: React.FC = () => {
   return (
@@ -35,9 +36,8 @@ const Footer: React.FC = () => {
       <div className="divider"></div>
 
       <div className="bottom-section">
-        <div className="logo">
-          {/* Insira aqui a imagem ou ícone do logotipo "plantPeace" */}
-          <img src="plantPeace-logo.png" alt="plantPeace Logo" />
+        <div className="logo">          
+          <img src={plantIcon} alt="plantPeace Logo" />
         </div>
         <p className="rights-reserved">Compassinhos® - All rights reserved.</p>
       </div>
