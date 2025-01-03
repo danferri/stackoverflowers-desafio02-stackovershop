@@ -1,6 +1,6 @@
 import React from 'react';
 import '../pages/Home/home.css';
-import flower from '../assets/fotos/flor.png'
+import flower from '../assets/fotos/flower.png'
 import flower2 from '../assets/fotos/flor2sfd.png'
 
 const ShopNow: React.FC = () => {

@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import AboutUs from './pages/AboutUs/AboutUs';
 import PageNotFound from './pages/NotFound/NotFound';
-import Home from './pages/Home/NotFound';
+import Home from './pages/Home/Home';
 
 const AppRoutes = () => {
   return (

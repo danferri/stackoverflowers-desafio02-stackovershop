@@ -5,7 +5,7 @@ import arthurPhoto from '../../assets/fotos/aperfil.png';
 import cauePhoto from '../../assets/fotos/caueperfil.png';
 import danielPhoto from '../../assets/fotos/danielperfil.png';
 import pedroPhoto from '../../assets/fotos/pedroperfil.png';
-import './App.css';
+import './about.css';
 
 const AboutUs = () => {
   const users = [
