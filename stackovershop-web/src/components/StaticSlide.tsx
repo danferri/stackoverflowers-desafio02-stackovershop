@@ -1,11 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/splide/dist/css/themes/splide-default.min.css';
-import '../pages/Slides/mySlider.css'
+import '../pages/Slides/mySlider.css';
 import cacto from "../assets/fotos/cacto.png";
-import cacto2 from "../assets/fotos/cacto2.png";
-import image3 from "../assets/fotos/image3.png";
-import image4 from "../assets/fotos/image4.png";
 
 interface Plant {
   id: string;
@@ -16,8 +13,6 @@ interface Plant {
   discount: number;
   labels: [string];
 }
-
-const images = [cacto, cacto2, image3, image4];
 
 const MySlider: React.FC = () => {
   const [plants, setPlants] = useState<Plant[]>([]);
@@ -36,32 +31,35 @@ const MySlider: React.FC = () => {
     <div className="slider-container">
       <Splide
         options={{
-          perPage: 5,      
-          focus: 'center',  
-          gap: '-40px',       
-          type: 'loop',      
-          perMove: 1,       
+          perPage: 5,
+          focus: 'center',
+          gap: '-40px',
+          type: 'loop',
+          perMove: 1,
           breakpoints: {
             600: {
-              perPage: 1,  
+              perPage: 1,
             },
             1024: {
-              perPage: 2,  
+              perPage: 2,
             },
           },
         }}
+
+        
       >
+
+        
         {plants.map((plant) => {
-          const randomIndex = Math.floor(Math.random() * images.length);
           return (
+            
             <SplideSlide key={plant.id}>
               <div className="slider-card">
-                <img src={images[randomIndex]} alt={plant.name} className="slider-img" />
-                <div className="card-info"> 
-                  <h2 className="plant-name">{plant.name}</h2> 
+                <img src={cacto} alt={plant.name} className="slider-img" />
+                <div className="card-info">
+                  <h2 className="plant-name">{plant.name}</h2>
                   <p className="plant-price">${plant.price}</p>
-                  <p className="rounded-label">{plant.labels[0]}</p>    
-                 
+                  <p className="rounded-label">{plant.labels[0]}</p>
                 </div>
               </div>
             </SplideSlide>
