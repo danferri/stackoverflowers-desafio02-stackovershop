@@ -19,7 +19,7 @@ model Plant {
   subtitle         String
   labels           String[] 
   price            Float    
-  isInSale         Boolean
+  isInSale         Boolean?
   discountPercentage Float   
   features         String
   description      String
