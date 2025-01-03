@@ -36,9 +36,12 @@ const Footer: React.FC = () => {
       <div className="divider"></div>
 
       <div className="bottom-section">
-        <div className="logo">          
+        <a href="/">
+          <div className="logo">          
           <img src={plantIcon} alt="plantPeace Logo" />
         </div>
+        </a>
+        
         <p className="rights-reserved">Compassinhos® - All rights reserved.</p>
       </div>
     </footer>
