@@ -6,6 +6,7 @@ import cauePhoto from '../../assets/fotos/caueperfil.png';
 import danielPhoto from '../../assets/fotos/danielperfil.png';
 import pedroPhoto from '../../assets/fotos/pedroperfil.png';
 import './App.css';
+import Footer from '../../components/Footer/Footer';
 
 const AboutUs = () => {
   const users = [
@@ -61,6 +62,7 @@ const AboutUs = () => {
           />
         ))}
       </div>
+      <Footer/>
     </div>
   );
 };

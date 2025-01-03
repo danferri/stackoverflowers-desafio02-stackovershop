@@ -1,0 +1,125 @@
+.footer {
+    background-color: #354733;
+    background-image: url("/src/assets/fotos/teste-removebg-preview.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;       
+    font-family: 'Arial', sans-serif;
+    color: #ffffff;    
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    bottom: 0;
+    position: fixed;    
+    text-align: center;
+    width: 100%;
+    height: 20rem;    
+}
+
+.footer .top-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.footer .left {
+    flex: 1;
+}
+
+.footer .left h4 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.footer .left p {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.footer .links {
+    display: flex;
+    flex: 2;
+    justify-content: space-between;
+}
+
+.footer .links div {
+    text-align: left;
+}
+
+.footer .links h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.footer .links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer .links ul li {
+    margin: 5px 0;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.footer .links ul li:hover {
+    text-decoration: underline;    
+}
+
+.footer .divider {
+    width: 90%;
+    height: 2px;
+    background-color: #ece57b;
+    opacity: 0.5;
+    margin: 50px 0;
+}
+
+.footer .bottom-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.footer .logo img {
+    height: 40px;
+    width: auto;
+}
+
+.footer .rights-reserved {
+    font-size: 14px;
+    text-align: right;
+}
+
+@media (max-width: 768px) {
+    .footer .top-section {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .footer .left,
+    .footer .links {
+        flex: 1 1 100%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .footer .bottom-section {
+        flex-wrap: wrap;
+        text-align: center;
+    }
+
+    .footer .logo {
+        margin-bottom: 10px;
+    }
+}
