@@ -1,0 +1,40 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f2f3eb;
+    padding: 2.5px 30px;
+    margin: 0;
+  }
+  
+  section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  section img {
+    width: 40px;
+    height: 40px;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  nav a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #2f3e46;
+    font-weight: 500;
+  }
+  
