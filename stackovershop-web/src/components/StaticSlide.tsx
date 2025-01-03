@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react';
-import { Splide, SplideSlide } from '@splidejs/react-splide';
-import '@splidejs/splide/dist/css/themes/splide-default.min.css';
-import '../pages/Slides/mySlider.css';
+import React, { useEffect, useState } from "react";
+import { Splide, SplideSlide } from "@splidejs/react-splide";
+import "@splidejs/splide/dist/css/themes/splide-default.min.css";
+import "../pages/Slides/mySlider.css";
 import cacto from "../assets/fotos/cacto.png";
 
 interface Plant {
@@ -18,7 +18,7 @@ const MySlider: React.FC = () => {
   const [plants, setPlants] = useState<Plant[]>([]);
 
   useEffect(() => {
-    fetch('http://localhost:5000/plantsList')
+    fetch("http://localhost:5000/plantsList")
       .then((response) => response.json())
       .then((data) => {
         setPlants(data);
@@ -32,9 +32,9 @@ const MySlider: React.FC = () => {
       <Splide
         options={{
           perPage: 5,
-          focus: 'center',
-          gap: '-40px',
-          type: 'loop',
+          focus: "center",
+          gap: "-40px",
+          type: "loop",
           perMove: 1,
           breakpoints: {
             600: {
@@ -45,14 +45,9 @@ const MySlider: React.FC = () => {
             },
           },
         }}
-
-        
       >
-
-        
         {plants.map((plant) => {
           return (
-            
             <SplideSlide key={plant.id}>
               <div className="slider-card">
                 <img src={cacto} alt={plant.name} className="slider-img" />
