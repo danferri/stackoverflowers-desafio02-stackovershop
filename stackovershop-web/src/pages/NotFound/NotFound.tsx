@@ -6,7 +6,7 @@ const PageNotFound = () => {
   const navigate = useNavigate(); 
 
   const handleGoToAboutUs = () => {
-    navigate('/about-us'); 
+    navigate('/'); 
   };
 
   return (

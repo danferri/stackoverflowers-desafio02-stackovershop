@@ -1,0 +1,221 @@
+.shop-now-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+  max-width: 120rem;
+  right: 0;
+  font-family: Arial, sans-serif;
+  color: white;
+  position: relative;
+}
+
+.shop-now-subheading {
+  width: auto; 
+  height: auto; 
+  font-family: 'Pacifico', cursive;
+  font-style: normal;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content:left;
+  text-align: center;
+  color: #000000;
+}
+
+.shop-now-subheading::before {
+  content: '';
+  display: block;
+  width: 40px; 
+  height: 2px;
+  background-color: #333;
+  margin-right: 10px;
+}
+
+.shop-now-heading {
+  font-family: 'EB Garamond', serif;
+  font-size: 68px;
+  line-height: 84px;
+  font-weight: bold;
+  margin: 1rem 0;
+  color: #354733;
+  text-transform: capitalize;
+}
+
+.shop-now-highlight {
+  color: #6c9b70;
+}
+
+.shop-now-text {
+  flex: 1;
+  padding-right: 20px;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #666;
+  margin-bottom: 2rem;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.shop-now-button {
+  background-color: #2d4a34;
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.shop-now-button:hover {
+  background-color: #355c42;
+}
+
+#planta-verde {
+    position: absolute;
+    bottom: 0; 
+    right: 0; 
+    height: auto;
+    width: auto; 
+}
+
+.planta-verde img {
+  max-width: 100%;
+  margin-right: -10rem;
+  right: 0;
+  filter: grayscale(1);
+}
+.text-shop-now {
+  margin-top: 5rem;
+  margin-left: 2rem;
+}
+
+.planta-esq {
+  position: absolute;
+  max-width: 100%;
+  left: 0; 
+  margin-left: -0.5rem;
+  top: 25rem;
+  mix-blend-mode: luminosity;
+}
+
+
+/* TAKE CARE */
+.steps-to-take {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: -2rem;
+  background-color: white;
+  width: 100%;
+  font-family: Arial, sans-serif;
+  background-color: white;
+  font-family: Arial, sans-serif;
+
+}
+
+.take-care-heading {
+  display: flex;
+  justify-content: center;
+  font-family: 'EB Garamond', serif;
+  font-size: 3rem;
+  line-height: 84px;
+  font-weight: bold;
+  margin: 1rem 0;
+  color: #354733;
+  text-transform: capitalize;
+}
+
+.title-tc {
+  margin-bottom: 2 rem;
+}
+
+.take-care-highlight {
+  color: #6c9b70;
+  margin-left: 0.5rem;
+}
+
+.take-care-text {
+  padding-right: 20px;
+  font-size: 1.2 rem;
+  line-height: 1.5;
+  color: #666; 
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  width: 55rem;
+  height: 3.5rem;
+  letter-spacing: 0.005em;
+}
+
+
+.steps-to-take img {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 0px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  width: 55px;
+  height: 55px;
+}
+
+.cards {
+  width: 15rem;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+  gap: 4rem;
+}
+
+.cards p {
+  width: 19rem;
+  display: flex;
+  justify-content: center;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-style: normal;
+  line-height: 29px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.cards h3 {
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-style: normal;
+}
+
+
+/* PHOTOS */
+.images {
+  display:flex;
+  justify-content: space-around;
+  gap: 5rem; /* Espaçamento entre as imagens */
+  max-width: 22rem; /* Largura máxima do contêiner */
+  padding: 2rem; /* Adiciona espaço interno ao contêiner */
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.images img {
+  width: 26rem; /* Ajusta o tamanho da imagem para ocupar o espaço disponível */
+  height: auto; /* Mantém as proporções das imagens */
+  border-radius: 8px; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adiciona sombra às imagens */
+  transition: transform 0.3s ease;
+}
+
+.images img:hover {
+  transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+}
+
+.images p {
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-style: normal;
+}

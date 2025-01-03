@@ -1,7 +1,7 @@
 #users {
     display: flex;
     flex-direction: row;
-    gap: 2rem; /* Aumentei o gap entre os colaboradores */
+    gap: 2rem;
     max-width: 80%;
     margin: 0 auto;
   }
@@ -18,7 +18,7 @@
     justify-content: center;
     text-align: center;
     overflow: hidden;
-    padding: 1.5rem; /* Aumentei o padding para dar mais espaço interno */
+    padding: 1.5rem;
   }
   
   #user_photo {
@@ -26,18 +26,18 @@
     height: 9rem;
     border-radius: 50%;
     object-fit: cover;
-    margin-bottom: 1rem; /* Aumentei o espaçamento entre a imagem e o texto */
+    margin-bottom: 1rem;
   }
   
   #social-container {
     display: flex;
     flex-direction: column;
-    gap: 0.6rem; /* Aumentei o espaço entre as redes sociais */
+    gap: 0.6rem;
     align-items: center;
   }
   
   .social {
-    max-width: 1.5rem; /* Aumentei o tamanho dos ícones sociais */
+    max-width: 1.5rem;
   }
   
   .social + span {
@@ -75,7 +75,7 @@
     align-items: center;
     text-transform: capitalize;
     color: #354733;
-    margin-bottom: 1rem; /* Aumentei o espaçamento abaixo do título */
+    margin-bottom: 1rem;
   }
   
   #text-au {
@@ -86,7 +86,7 @@
     display: flex;
     align-items: center;
     color: #808276;
-    margin-bottom: 1.2rem; /* Aumentei o espaçamento abaixo do texto */
+    margin-bottom: 1.2rem;
   }
   
   #subtitle-au {
@@ -108,11 +108,11 @@
     .user_profile {
       width: 100%;
       height: auto;
-      padding: 1.5rem; /* Aumentei o padding para telas menores */
+      padding: 1.5rem;
     }
   
     #user_photo {
-      width: 7.5rem; /* Ajustei o tamanho da imagem */
+      width: 7.5rem;
       height: 7.5rem;
       margin-bottom: 1rem;
     }
@@ -120,12 +120,12 @@
     #title-au {
       font-size: 2.1rem;
       text-align: center;
-      margin-bottom: 1rem; /* Espaço abaixo do título */
+      margin-bottom: 1rem;
     }
   
     #text-au {
       font-size: 1.3rem;
-      margin-bottom: 1rem; /* Espaço abaixo do texto */
+      margin-bottom: 1rem;
     }
   
     #subtitle-au {
@@ -137,12 +137,12 @@
   @media (max-width: 480px) {
     #title-au {
       font-size: 1.8rem;
-      margin-bottom: 1rem; /* Espaço abaixo do título */
+      margin-bottom: 1rem;
     }
   
     #text-au {
       font-size: 1rem;
-      margin-bottom: 1rem; /* Espaço abaixo do texto */
+      margin-bottom: 1rem;
     }
   
     #subtitle-au {
