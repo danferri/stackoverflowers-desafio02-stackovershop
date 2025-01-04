@@ -12,7 +12,7 @@ const TakeCare: React.FC = () => {
   return (
     <div className="steps-to-take">
         <section className='title-tc'>
-            <h1 className="take-care-heading">
+            <h1 className="heading-text">
                 Steps To Take Care Of Your<span className="take-care-highlight"> Plants</span>
             </h1>
             <p className="take-care-text">
@@ -22,19 +22,19 @@ const TakeCare: React.FC = () => {
             <br /><br /><br />
         </section>
         <section className='cards'>
-            <div id='watering'>
+            <div className='balls'>
                 <img src={watering} alt="" />
                 <h3>Watering</h3>
                 <p>Water your plants when the top inch of soil feels dry to the touch. Avoid overwatering, 
                     as it can lead to root  dehydration.</p>
             </div>
-            <div id='sunlight'>
+            <div className='balls'>
                 <img src={sunlight} alt="" />
                 <h3>Sunlight</h3>
                 <p>Most plants need adequate sunlight to thrive. Place your plants in areas that receive 
                     the appropriate amount of light for their specific needs</p>
             </div>
-            <div id='nutrients'>
+            <div className='balls'>
                 <img src={nutrients} alt="" />
                 <h3>Nutrients and Fertlizing</h3>
                 <p>Choose a suitable fertilizer based on the specific needs of your plants, 

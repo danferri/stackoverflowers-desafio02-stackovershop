@@ -31,9 +31,9 @@ const MySlider: React.FC = () => {
     <div className="slider-container">
       <Splide
         options={{
-          perPage: 5,
+          perPage: 4,
           focus: "center",
-          gap: "-50px",
+          gap: "-65px",
           type: "loop",
           perMove: 1,
           breakpoints: {

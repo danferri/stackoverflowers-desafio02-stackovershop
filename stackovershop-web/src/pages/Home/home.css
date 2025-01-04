@@ -1,23 +1,59 @@
+@font-face {
+  font-family: 'Raleway';
+  src: url('../../assets/fonts/Raleway/static/Raleway-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'EB Garamond';
+  src: url('../../assets/fonts/EB_Garamond/static/EBGaramond-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  width: 100%;
+  height: 54rem;
+  background: #F0F1EE;
+  overflow-x: hidden;
+}
+
+.shop-now-container,
+.images {
+  max-width: 100%;
+}
+
+.planta-verde img,
+.shop-now-container,
+.images {
+  width: 100%;
+}
+
 .shop-now-container {
   display: flex;
   justify-content: space-between;
-  padding: 2rem;
-  max-width: 120rem;
-  right: 0;
+  padding: 1.5rem;
   font-family: Arial, sans-serif;
   color: white;
   position: relative;
+  background-color: #F0F1EE;
 }
 
 .shop-now-subheading {
-  width: auto; 
-  height: auto; 
+  width: auto;
+  height: auto;
   font-family: 'Pacifico', cursive;
   font-style: normal;
-  font-size: 18px;
+  font-size: 1rem;
   display: flex;
   align-items: center;
-  justify-content:left;
+  justify-content: left;
   text-align: center;
   color: #000000;
 }
@@ -25,20 +61,22 @@
 .shop-now-subheading::before {
   content: '';
   display: block;
-  width: 40px; 
-  height: 2px;
+  width: 2rem;
+  height: 0.1rem;
   background-color: #333;
-  margin-right: 10px;
+  margin-right: 0.5rem;
 }
 
 .shop-now-heading {
-  font-family: 'EB Garamond', serif;
-  font-size: 68px;
-  line-height: 84px;
-  font-weight: bold;
-  margin: 1rem 0;
+  font-family: 'EB Garamond';
+  font-size: 3.2rem;
+  line-height: 4.5rem;
+  margin: 0.05rem 0;
   color: #354733;
   text-transform: capitalize;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
 }
 
 .shop-now-highlight {
@@ -47,22 +85,30 @@
 
 .shop-now-text {
   flex: 1;
-  padding-right: 20px;
+  padding-right: 1rem;
   font-size: 1rem;
   line-height: 1.5;
   color: #666;
-  margin-bottom: 2rem;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  margin-bottom: 1.5rem;
+  font-family: 'Raleway';
+  font-style: normal;
 }
 
 .shop-now-button {
   background-color: #2d4a34;
   color: #fff;
-  border: none;
-  padding: 0.75rem 1.5rem;
+  border: 0.05rem solid #354733;
   font-size: 1rem;
+  line-height: 1.5;
+  font-family: 'Raleway';
+  font-style: normal;
   cursor: pointer;
   transition: background-color 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10rem;
+  height: 3.2rem;
 }
 
 .shop-now-button:hover {
@@ -70,87 +116,96 @@
 }
 
 #planta-verde {
-    position: absolute;
-    bottom: 0; 
-    right: 0; 
-    height: auto;
-    width: auto; 
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: auto;
+  height: auto;
+  margin: 0;
 }
 
 .planta-verde img {
-  max-width: 100%;
-  margin-right: -10rem;
-  right: 0;
-  filter: grayscale(1);
+  position: absolute;
+  width: 100%;
+  max-width: 45rem;
+  height: auto;
+  right: -0.05rem;
+  top: -3rem;
+  mix-blend-mode: luminosity;
 }
+
 .text-shop-now {
-  margin-top: 5rem;
-  margin-left: 2rem;
+  margin-top: 4rem;
+  margin-left: 2.5rem;
+  width: 30rem;
+  height: 18rem;
+  left: 5rem;
+  top: 12rem;
 }
 
 .planta-esq {
   position: absolute;
-  max-width: 100%;
-  left: 0; 
+  width: 100%;
+  left: 0;
+  top: 28.5rem;
   margin-left: -0.5rem;
-  top: 25rem;
   mix-blend-mode: luminosity;
 }
 
+.planta-esq img {
+  width: 15rem;
+}
 
-/* TAKE CARE */
 .steps-to-take {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  margin-top: -2rem;
   background-color: white;
   width: 100%;
-  font-family: Arial, sans-serif;
-  background-color: white;
-  font-family: Arial, sans-serif;
-
+  padding: 1.5rem;
+  margin-top: 22rem;
+  margin-left: -0.47rem;
 }
 
-.take-care-heading {
+.heading-text {
   display: flex;
   justify-content: center;
-  font-family: 'EB Garamond', serif;
-  font-size: 3rem;
-  line-height: 84px;
-  font-weight: bold;
+  font-style: normal;
+  font-size: 3.5rem;
+  line-height: 4.5rem;
   margin: 1rem 0;
   color: #354733;
   text-transform: capitalize;
 }
 
 .title-tc {
-  margin-bottom: 2 rem;
+  margin-bottom: 1.5rem;
 }
 
 .take-care-highlight {
   color: #6c9b70;
-  margin-left: 0.5rem;
+  margin-left: 1.5rem;
 }
 
 .take-care-text {
-  padding-right: 20px;
-  font-size: 1.2 rem;
+  padding-right: 1.25rem;
+  font-size: 1.3rem;
   line-height: 1.5;
-  color: #666; 
+  color: #666;
   text-align: center;
   display: flex;
   justify-content: center;
   margin: 0 auto;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: 'Raleway';
   flex: none;
   order: 1;
   flex-grow: 0;
-  width: 55rem;
-  height: 3.5rem;
+  width: 45rem;
+  height: 3rem;
   letter-spacing: 0.005em;
+  margin-top: 2.5rem;
+  margin-bottom: 3.5rem;
 }
-
 
 .steps-to-take img {
   display: flex;
@@ -161,61 +216,95 @@
   flex: none;
   order: 0;
   flex-grow: 0;
-  width: 55px;
-  height: 55px;
+  width: 3.2rem;
+  height: 3.2rem;
 }
 
 .cards {
-  width: 15rem;
   display: flex;
-  justify-content: center;
-  text-align: center;
-  margin: 0 auto;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
   gap: 4rem;
+  width: 100%;
+  height: 18rem;
+  flex: none;
+  justify-content: center;
+  margin: 0 auto;
 }
 
 .cards p {
-  width: 19rem;
+  color: #666;
+}
+
+.balls {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  gap: 1.2rem;
+  width: 25rem;
+  height: 18rem;
+}
+
+.cards p {
+  width: 17rem;
   display: flex;
   justify-content: center;
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: 'Raleway';
   font-style: normal;
-  line-height: 29px;
+  line-height: 1.7rem;
   display: flex;
   align-items: center;
   text-align: center;
 }
 
 .cards h3 {
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: 'Raleway';
   font-style: normal;
 }
 
-
-/* PHOTOS */
 .images {
-  display:flex;
-  justify-content: space-around;
-  gap: 5rem; /* Espaçamento entre as imagens */
-  max-width: 22rem; /* Largura máxima do contêiner */
-  padding: 2rem; /* Adiciona espaço interno ao contêiner */
-  margin-left: 1rem;
-  margin-right: 1rem;
-}
-
-.images img {
-  width: 26rem; /* Ajusta o tamanho da imagem para ocupar o espaço disponível */
-  height: auto; /* Mantém as proporções das imagens */
-  border-radius: 8px; 
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adiciona sombra às imagens */
-  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2rem;
+  gap: 5rem;
+  width: 100%;
+  height: 45rem;
+  margin: 0 auto;
+  margin-top: 5rem;
 }
 
 .images img:hover {
-  transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+  transform: scale(1.05);
+}
+
+.images img {
+  margin: 0 auto;
+  width: 22rem;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
 }
 
 .images p {
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: 'Raleway';
   font-style: normal;
+  color: #666;
+  width: 22rem;
+}
+
+#carrossel1 {
+  margin-top: 4rem;
+  margin-bottom: -4rem;
+}
+
+#carrossel2 {
+  margin-top: -3rem;
+  margin-bottom: -4rem;
+  letter-spacing: 0.005em;
 }

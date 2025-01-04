@@ -4,15 +4,15 @@
   align-items: center;
   height: 100vh;
   overflow: hidden;
+  width: 108.25rem;
 }
 
 .slider-card {
   width: 90%;
   max-width: 300px;
   height: 400px;
-  border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   background-color: #fff;
   transition: transform 0.3s ease-in-out;
 }
@@ -27,7 +27,7 @@
 }
 
 .card-info {
-  padding: 10px;
+  padding: 2px;
   background-color: #fff;
   box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
   display: flex;
@@ -36,27 +36,29 @@
 }
 
 .plant-name {
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 5px;
-  color: #333;
-  text-align: left;
-  width: 100%;
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  color: #354733;
+  display: flex;
+  align-items: center;
+  margin-left: 1rem;
 }
 
-.plant-description {
-  font-size: 14px;
-  color: #777;
-  text-align: center;
-  margin-bottom: 10px;
-}
 
 .plant-price {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
   font-size: 16px;
-  font-weight: 500;
-  color: #354735;
-  text-align: left;
-  width: 100%;
+  line-height: 154.5%;
+  width: 49px;
+  height: 25px;
+  color: #354733;
+  margin-left: 1rem;
+  margin-top: -1rem;
 }
 
 .rounded-label {
@@ -64,10 +66,14 @@
   padding: 5px 15px;
   color: #354735;
   border-radius: 20px;
-  border: 2px solid #354735;
-  font-size: 14px;
+  border: 2px solid #558d55;
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
   text-align: center;
-  margin-left: 10px;
+  margin-left: 1rem;
+  margin-top: -0.05rem;
 }
 
 .center-title {
