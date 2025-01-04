@@ -1,10 +1,10 @@
 import React from "react";
 import ShopNow from "../../components/ShopNow";
 import TakeCare from "../../components/StepsToTakeCare";
-import Slides from "../../components/component/Splide/Slides";
-import StaticSlides from "../../components/component/Splide/StaticSlide";
+import Slides from '../../components/component/Splide/Slides';
 import Header from "../../components/component/Header/Header";
 import Footer from "../../components/component/Footer/Footer";
+import StaticSlides from "../../components/component/Splide/StaticSlide";
 
 const Home: React.FC = () => {
   return (
