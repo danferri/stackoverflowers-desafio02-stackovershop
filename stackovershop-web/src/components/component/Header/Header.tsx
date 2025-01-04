@@ -1,4 +1,4 @@
-import { BrowserRouter, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import PlantLogo from "../../../assets/PlantLogo.svg";
 import {SignedIn, SignedOut, SignInButton, UserButton} from "@clerk/clerk-react";
 import "./HeaderStyle.css";
@@ -11,7 +11,7 @@ const Header = () => {
       </section>
       <nav className="nav">
         <ul className="nav-list">
-          <Link to="/" className="nav-link">Home</Link>
+          <Link to="/" className="nav-link" id="home_btn">Home</Link>
           <Link to="/register" className="nav-link">Register</Link>
           <Link to="/products" className="nav-link">Products</Link>
           <Link to="/about-us" className="nav-link">About us</Link>

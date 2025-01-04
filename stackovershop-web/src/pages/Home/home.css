@@ -296,6 +296,9 @@ body {
   font-style: normal;
   color: #666;
   width: 22rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  text-align: justify;
 }
 
 #carrossel1 {

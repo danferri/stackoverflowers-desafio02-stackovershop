@@ -1,3 +1,16 @@
+@font-face {
+  font-family: 'Raleway';
+  src: url('../../assets/fonts/Raleway/static/Raleway-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'EB Garamond';
+  src: url('../../assets/fonts/EB_Garamond/static/EBGaramond-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 
 * {
   margin: 0;
@@ -37,8 +50,14 @@
 .nav-link {
   text-decoration: none;
   color: rgb(18, 65, 18);
-  font-size: 13px;
+  font-size: 16px;
   transition: color 0.3s ease;
+  font-family: 'Raleway';
+  font-weight: bold;
+}
+
+#home_btn {
+  color: #859964;
 }
 
 .nav-link:hover {
