@@ -1,8 +1,9 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import AboutUs from './pages/AboutUs/AboutUs';
 import PageNotFound from './pages/NotFound/NotFound';
-import Home from './pages/Home/Home';
-import FormPlant  from "../src/components/Form"; 
+import FormPlant from './pages/Form/FormPlant';
+import Products from './components/Products';
+
 
 const AppRoutes = () => {
   return (
@@ -11,7 +12,8 @@ const AppRoutes = () => {
 
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="*" element={<PageNotFound />} />
-        <Route path="/form" element={<FormPlant onSuccess={() => {}} />} />
+        <Route path="/form" element={<FormPlant />}/>
+        <Route path="/products" element={<Products />} />
       </Routes>
     </BrowserRouter>
   );

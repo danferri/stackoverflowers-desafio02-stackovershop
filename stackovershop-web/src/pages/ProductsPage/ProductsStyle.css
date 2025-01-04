@@ -1,0 +1,169 @@
+* {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #F0F1EE;
+    color: #2f3e46;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+/* Estilização do container principal */
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 50px;
+    gap: 30px;
+    padding: 20px;
+    align-items: stretch;
+}
+
+/* Card principal */
+.PlantInfo, .image {
+    flex: 1 1 400px;
+    border-radius: 12px;
+    padding: 20px;
+    max-width: 600px;
+    height: auto;
+}
+
+/* Títulos e Subtítulos */
+.plantTitle {
+    margin-bottom: 15px;
+}
+
+.plantName {
+    font-family: 'EB Garamond';
+    font-size: 3rem;
+    font-weight: bold;
+    color: #354733;
+}
+
+.plantSub {
+    font-size: 1.1rem;
+    color: #AFB2AA;;
+}
+
+/* Labels e Tipos de Planta */
+.plantLabels {
+    display: flex;
+    flex-direction: row;
+    gap: 7px;
+    margin: 5px 0;
+    padding: 6px 0;
+    flex-wrap: wrap;
+}
+
+.plantLabel, .plantType {
+    background: #F6FFF6;
+    border: 1px solid #83E281;
+    padding: 5px 10px;
+    border-radius: 19px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #2f3e46;
+}
+
+/* Preço */
+.plantPrice {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #2f3e46;
+    margin: 5px 0;
+}
+
+/* Botão */
+button {
+    background-color: #354733;
+    border: none;
+    padding: 15px 50px;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    margin: 5px 0;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #354f52;
+}
+
+/* Features e Descrição */
+.features {
+    color: black;
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin: 10px 0 20px 0;
+}
+
+.plantFeatures {
+    font-size: 1rem;
+    margin-top: 5px;
+    color: #555;
+}
+
+.plantDescription {
+    margin: 20px 0 0 0;
+}
+
+.description {
+    margin: 20px 0 20px 0;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: black;
+}
+
+.plantDescriptions {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Imagem */
+.image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+ul{
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .products {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .PlantInfo, .image {
+        width: 100%;
+        max-width: 90%;
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .plantName {
+        font-size: 2rem;
+    }
+
+    .plantPrice {
+        font-size: 1.2rem;
+    }
+
+    button {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .PlantInfo {
+        padding: 15px;
+        height: auto;
+    }
+}
