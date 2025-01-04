@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import api from "../services/api";
 import '../pages/ProductsPage/ProductsStyle.css';
+import Header from './HeaderComp/Header';
 
 
 
@@ -43,6 +44,7 @@ const Products = () => {
     
     return (
       <div className='products'>
+        <Header/>
           {/* {plantas.map((plant, id) => ( */}
 
           {/* Imagem */}
