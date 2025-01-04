@@ -17,6 +17,8 @@
     "@types/axios": "^0.9.36",
     "@types/react-router-dom": "^5.3.3",
     "axios": "^1.7.9",
+    "install": "^0.13.0",
+    "npm": "^11.0.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-hook-form": "^7.54.2",

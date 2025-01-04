@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import AboutUs from './pages/AboutUs/AboutUs';
 import PageNotFound from './pages/NotFound/NotFound';
 import Home from './pages/Home/Home';
+import Product from './pages/ProductsPage/Product';
 import FormPlant from './pages/Form/FormPlant';
 
 const AppRoutes = () => {
@@ -11,7 +12,8 @@ const AppRoutes = () => {
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="*" element={<PageNotFound />} />
         <Route path="/" element={<Home />} />
-        <Route path='/register' element={<FormPlant/>}/>
+        <Route path="/plants/:id" element={<Product />} />
+        <Route path='/register' element={<FormPlant />}/>
       </Routes>
     </BrowserRouter>
   );

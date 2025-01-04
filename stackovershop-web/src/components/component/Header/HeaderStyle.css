@@ -56,11 +56,12 @@
   font-weight: bold;
 }
 
-#home_btn {
+
+.nav-link:hover {
   color: #859964;
 }
 
-.nav-link:hover {
+.nav-link.active {
   color: #859964;
 }
 
