@@ -1,4 +1,4 @@
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import PlantLogo from "../../../assets/PlantLogo.svg";
 import {SignedIn, SignedOut, SignInButton, UserButton} from "@clerk/clerk-react";
 import "./HeaderStyle.css";

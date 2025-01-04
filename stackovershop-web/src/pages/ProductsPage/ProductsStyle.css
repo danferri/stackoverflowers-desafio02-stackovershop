@@ -1,5 +1,5 @@
 * {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Raleway';
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -14,22 +14,25 @@ body {
 
 .products {
     display: flex;
-    justify-content: center;
     align-items: center;
-    width: 100vw;
-    height: 70vh; 
-    margin: 0;
+    justify-content: center;
+    width: 100%;
+    height: auto; 
+    margin-top: 10rem;
 }
 
 .image {
     float: left;
-    width: 50%;
+    height: auto;
     border-radius: 12px;
     padding: 10px;
+    width: 30rem;
+    height: auto;
+    margin-left: -15rem;
 }
 
 .image img {
-    width: 100%;
+    width: 20%;
     height: auto;
     border-radius: 12px;
 }
@@ -39,7 +42,7 @@ body {
     width: 50%;
     padding: 20px;
     border-radius: 12px;
-    box-sizing: border-box;
+    margin-right: -10rem;
 }
 
 .plantTitle {

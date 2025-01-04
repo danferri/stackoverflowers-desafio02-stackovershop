@@ -81,6 +81,7 @@ body {
 
 .shop-now-highlight {
   color: #6c9b70;
+  font-family: 'EB Garamond';
 }
 
 .shop-now-text {
@@ -107,7 +108,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 10rem;
+  width: 11.5rem;
   height: 3.2rem;
 }
 
@@ -129,7 +130,7 @@ body {
   width: 100%;
   max-width: 45rem;
   height: auto;
-  right: -0.05rem;
+  right: 1.2rem;
   top: -3rem;
   mix-blend-mode: luminosity;
 }
@@ -148,7 +149,7 @@ body {
   width: 100%;
   left: 0;
   top: 28.5rem;
-  margin-left: -0.5rem;
+  margin-left: -1.3rem;
   mix-blend-mode: luminosity;
 }
 
@@ -164,12 +165,13 @@ body {
   width: 100%;
   padding: 1.5rem;
   margin-top: 22rem;
-  margin-left: -0.47rem;
+  margin-left: -1.2rem;
 }
 
 .heading-text {
   display: flex;
   justify-content: center;
+  font-family: '';
   font-style: normal;
   font-size: 3.5rem;
   line-height: 4.5rem;
@@ -184,7 +186,8 @@ body {
 
 .take-care-highlight {
   color: #6c9b70;
-  margin-left: 1.5rem;
+  margin-left: 1rem;
+  font-family: '';
 }
 
 .take-care-text {
@@ -296,9 +299,10 @@ body {
   font-style: normal;
   color: #666;
   width: 22rem;
-  margin-top: 0.5rem;
+  margin-top: 2rem;
   margin-bottom: 1rem;
   text-align: justify;
+  font-size: 0.8rem;
 }
 
 #carrossel1 {

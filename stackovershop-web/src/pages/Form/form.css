@@ -1,6 +1,20 @@
+@font-face {
+    font-family: 'Raleway';
+    src: url('../../assets/fonts/Raleway/static/Raleway-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'EB Garamond';
+    src: url('../../assets/fonts/EB_Garamond/static/EBGaramond-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
 .page-container {
     display: flex;
-    max-width: 75rem;
+    max-width: 100%;
     margin: 0 auto;
     padding: 1.25rem;
     min-height: 100vh;
@@ -8,10 +22,8 @@
 }
 
 .form-container {
-    flex: 1;
-    max-width: 25rem;
+    max-width: 60rem;
     padding: 1.25rem;
-    font-family: Arial, sans-serif;
 }
 
 .image-container {
@@ -19,13 +31,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
-}
-
-.plant-image {
-    max-width: 100%;
-    height: auto;
-    object-fit: cover;
 }
 
 .FormTitle{color:#354733;
@@ -33,6 +38,7 @@
     padding-bottom: 1rem;
     border-bottom:#AFB2AA solid 0.07rem;
     margin-top: 2rem;
+    font-family: 'Raleway';
 }
 
 .form-group {
@@ -55,6 +61,7 @@
     border: #AFB2AA solid 0.07rem;
     border-radius: 0.2rem;
     background: transparent;
+    font-family: 'Raleway';
 }
 
 .description-input {
@@ -66,6 +73,7 @@
     border: #AFB2AA solid 0.07rem;
     border-radius:0.2rem ;
     background: transparent;
+    font-family: 'Raleway';
 }
 
 

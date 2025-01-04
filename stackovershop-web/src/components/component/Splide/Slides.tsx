@@ -45,7 +45,7 @@ const MySlider: React.FC = () => {
         options={{
           perPage: 4,
           focus: "center",
-          gap: "-65px",
+          gap: "-90px",
           type: "loop",
           perMove: 1,
           breakpoints: {
