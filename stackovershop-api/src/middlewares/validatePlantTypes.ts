@@ -4,19 +4,7 @@ import prismaClient from "../database/connection";
 import { ObjectId } from "mongodb";
 
 const plantTypeSchema = yup.object().shape({
-    labels: yup
-        .array()
-        .of(
-            yup.object().shape({
-                id: yup
-                    .string()
-                    .required("Each label must have an id.")
-                    .test("is-objectid", "Invalid id format.", (value) => ObjectId.isValid(value)),
-                plantType: yup.string().required("Each label must have a plantType."),
-            })
-        )
-        .min(1, "At least one label must be provided.")
-        .required("Labels are required."),
+    plantTypeId: yup.string().required("Plant type id is required."),
 });
 
 export const validatePlantTypes = async (request: FastifyRequest, reply: FastifyReply) => {

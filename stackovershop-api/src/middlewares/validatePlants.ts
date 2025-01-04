@@ -15,7 +15,7 @@ const plantSchema = yup.object().shape({
         .typeError("The price must be a number.")
         .positive()
         .required("The price is required."),
-    isInSale: yup.boolean().optional(),
+
     disccountPercentage: yup
         .number()
         .min(0, "Discount must be at least 0.")

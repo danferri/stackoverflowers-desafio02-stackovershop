@@ -12,8 +12,8 @@ export async function plantsRoutes(fastify:FastifyInstance, options: FastifyPlug
         const validationResult = await validatePlant(request, reply);
         if (validationResult) return;
         
-        const plantTypeValidationResult = await validatePlantTypes(request, reply);
-        if (plantTypeValidationResult) return;
+        // const plantTypeValidationResult = await validatePlantTypes(request, reply);
+        // if (plantTypeValidationResult) return;
 
         return new createPlantController().handle(request, reply);
     })
