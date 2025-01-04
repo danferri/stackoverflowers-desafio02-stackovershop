@@ -3,6 +3,7 @@ import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/splide/dist/css/themes/splide-default.min.css";
 import "../Splide/mySlider.css";
 import cacto from "../../../assets/fotos/cacto.png";
+import { useNavigate } from "react-router-dom"; 
 
 interface Plant {
   id: string;
@@ -16,6 +17,7 @@ interface Plant {
 
 const MySlider: React.FC = () => {
   const [plants, setPlants] = useState<Plant[]>([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     fetch("http://localhost:5000/plantsList")
@@ -26,6 +28,11 @@ const MySlider: React.FC = () => {
       })
       .catch((error) => console.error("Erro ao buscar os dados:", error));
   }, []);
+
+ 
+  const handleCardClick = (id: string) => {
+    navigate(`/plants/${id}`); 
+  };
 
   return (
     <div className="slider-container">
@@ -49,7 +56,10 @@ const MySlider: React.FC = () => {
         {plants.map((plant) => {
           return (
             <SplideSlide key={plant.id}>
-              <div className="slider-card">
+              <div
+                className="slider-card"
+                onClick={() => handleCardClick(plant.id)} 
+              >
                 <img src={cacto} alt={plant.name} className="slider-img" />
                 <div className="card-info">
                   <h2 className="plant-name">{plant.name}</h2>

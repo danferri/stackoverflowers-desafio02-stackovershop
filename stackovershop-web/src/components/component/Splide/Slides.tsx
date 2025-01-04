@@ -6,6 +6,7 @@ import cacto from "../../../assets/fotos/cacto.png";
 import cacto2 from "../../../assets/fotos/cacto2.png";
 import image3 from "../../../assets/fotos/image3.png";
 import image4 from "../../../assets/fotos/image4.png";
+import { useNavigate } from "react-router-dom"; 
 
 interface Plant {
   id: string;
@@ -21,6 +22,7 @@ const images = [cacto, cacto2, image3, image4];
 
 const MySlider: React.FC = () => {
   const [plants, setPlants] = useState<Plant[]>([]);
+  const navigate = useNavigate(); 
 
   useEffect(() => {
     fetch("http://localhost:5000/plantsList")
@@ -31,6 +33,11 @@ const MySlider: React.FC = () => {
       })
       .catch((error) => console.error("Erro ao buscar os dados:", error));
   }, []);
+
+ 
+  const handleCardClick = (id: string) => {
+    navigate(`/plants/${id}`); 
+  };
 
   return (
     <div className="slider-container">
@@ -55,7 +62,10 @@ const MySlider: React.FC = () => {
           const randomIndex = Math.floor(Math.random() * images.length);
           return (
             <SplideSlide key={plant.id}>
-              <div className="slider-card">
+              <div
+                className="slider-card"
+                onClick={() => handleCardClick(plant.id)} 
+              >
                 <img
                   src={images[randomIndex]}
                   alt={plant.name}
