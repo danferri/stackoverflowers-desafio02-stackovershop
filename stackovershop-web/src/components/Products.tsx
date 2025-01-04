@@ -2,6 +2,11 @@ import { useEffect, useState } from 'react';
 import api from "../services/api";
 import '../pages/ProductsPage/ProductsStyle.css';
 import { useParams } from 'react-router-dom';
+import imgDefault from "../assets/fotos/ImageDefault.png"
+import cacto from "../assets/fotos/cacto.png";
+import cacto2 from "../assets/fotos/cacto2.png";
+import image3 from "../assets/fotos/image3.png";
+import image4 from "../assets/fotos/image4.png";
 
 
 
@@ -22,6 +27,8 @@ const Products = () => {
     const { id } = useParams();
     const [plant, setPlant] = useState<Plant | null>();
     const [error, setError] = useState(null);
+    const images = [cacto, cacto2, image3, image4, imgDefault];
+    const randomIndex = Math.floor(Math.random() * images.length);
   
     useEffect(() => {
       const fetchData = async () => {
@@ -44,7 +51,7 @@ const Products = () => {
         <div>
           <div className='PlantImage'>
           {/* Imagem */}
-          <img src={plant.imgUrl} alt={plant.name} className='image' onError={(e) => e.currentTarget.src = '/assets/img/'} />
+          <img src={images[randomIndex]} alt={plant.name} className='image'/>
           </div>
           <div className='PlantInfo'>
             {/* Título e Subtítulo */}
