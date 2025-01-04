@@ -1,17 +1,19 @@
 import { FastifyInstance, FastifyPluginOptions, FastifyRequest, FastifyReply } from "fastify";
 import { createPlantController } from "../controllers/createPlantController";
 import { listPlantsController } from "../controllers/listPlantsController";
-import { getPlantByIdController } from "../controllers/getPlantByIdController";  // Importando o controlador de getPlantById
-import { validatePlantTypes } from "../middlewares/validatePlantTypes"; // Corrigir a importação
+import { getPlantByIdController } from "../controllers/getPlantByIdController";  
+import { validatePlantTypes } from "../middlewares/validatePlantTypes";
+import { validatePlant } from "../middlewares/validatePlants";
+
 
 export async function plantsRoutes(fastify: FastifyInstance, options: FastifyPluginOptions) {
 
     fastify.post("/plants", async (request: FastifyRequest, reply: FastifyReply) => {
-        const validationResult = await validatePlantTypes(request, reply);
+        const validationResult = await validatePlant(request, reply);
         if (validationResult) return;
 
         const plantTypeValidationResult = await validatePlantTypes(request, reply);
-        if (plantTypeValidationResult) return;
+        if (plantTypeValidationResult !== null && plantTypeValidationResult !== undefined) return;
 
         return new createPlantController().handle(request, reply);
     });
