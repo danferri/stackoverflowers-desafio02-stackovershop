@@ -4,6 +4,9 @@ import { FormSchema } from "../schemas/formSchema";
 import imgPlant from '../assets/img/image-21.png';
 import axios from "axios";
 import '../pages/Form/form.css';
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 
 interface PlantType {
   id: string;
@@ -35,6 +38,13 @@ const Form = ({ onSuccess }: FormProps) => {
       );
       console.log("Product successfully sent to backend:", response.data);
       onSuccess(response.data as FormSchema);
+      toast.success("Plant registered successfully!", {
+        icon: () => <span role="img" aria-label="plant">🌱</span>,
+        style: {
+          backgroundColor: "#354733",
+          color:"#fff"
+        }
+      })
       reset();
     } catch (error) {
       console.error("Error sending product to backend:", error);
@@ -193,6 +203,7 @@ const Form = ({ onSuccess }: FormProps) => {
           Register
         </button>
       </form>
+      <ToastContainer position="bottom-left" autoClose={5000}/>
       <aside className="image-container">
         <img src={imgPlant} alt="Plant illustration" />
       </aside>
