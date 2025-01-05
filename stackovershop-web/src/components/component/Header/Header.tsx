@@ -15,7 +15,7 @@ const Header = () => {
           { isActive: boolean }) => isActive ? "nav-link active" : "nav-link" }>Home</NavLink>
           <NavLink to="/register" className={({ isActive }: 
           { isActive: boolean }) => isActive ? "nav-link active" : "nav-link" }>Register</NavLink>
-          <NavLink to="/product" className={({ isActive }: 
+          <NavLink to="/products" className={({ isActive }: 
           { isActive: boolean }) => isActive ? "nav-link active" : "nav-link" }>Products</NavLink>
           <NavLink to="/about-us" className={({ isActive }: 
           { isActive: boolean }) => isActive ? "nav-link active" : "nav-link" }>About us</NavLink>

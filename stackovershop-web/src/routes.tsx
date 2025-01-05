@@ -4,6 +4,7 @@ import PageNotFound from './pages/NotFound/NotFound';
 import Home from './pages/Home/Home';
 import Product from './pages/ProductsPage/Product';
 import FormPlant from './pages/Form/FormPlant';
+import AllProductsPage from './pages/AllProductsPage/Products';
 
 const AppRoutes = () => {
   return (
@@ -14,6 +15,7 @@ const AppRoutes = () => {
         <Route path="/" element={<Home />} />
         <Route path="/plants/:id" element={<Product />} />
         <Route path='/register' element={<FormPlant />}/>
+        <Route path='/products' element={<AllProductsPage />}/>
       </Routes>
     </BrowserRouter>
   );
