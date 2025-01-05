@@ -6,7 +6,7 @@ import axios from "axios";
 import '../pages/Form/form.css';
 
 interface PlantType {
-  _id: string;
+  id: string;
   plantType: string;
 }
 
@@ -84,7 +84,7 @@ const Form = ({ onSuccess }: FormProps) => {
           >
             <option value="">Select Plant Type</option>
             {plantTypes.map((type) => (
-              <option key={type._id} value={type._id}>
+              <option key={type.id} value={type.id}>
                 {type.plantType}
               </option>
             ))}
