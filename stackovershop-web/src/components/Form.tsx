@@ -15,7 +15,7 @@ interface FormProps {
 }
 
 const Form = ({ onSuccess }: FormProps) => {
-  const { register, handleSubmit, errors } = useForms();
+  const { register, handleSubmit, errors, reset } = useForms();
   const [plantTypes, setPlantTypes] = useState<PlantType[]>([]);
 
   useEffect(() => {
@@ -35,6 +35,7 @@ const Form = ({ onSuccess }: FormProps) => {
       );
       console.log("Product successfully sent to backend:", response.data);
       onSuccess(response.data as FormSchema);
+      reset();
     } catch (error) {
       console.error("Error sending product to backend:", error);
     }
