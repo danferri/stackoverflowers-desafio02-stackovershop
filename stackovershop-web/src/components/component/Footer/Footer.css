@@ -12,13 +12,12 @@
   font-style: normal;
 }
 
-html, body {
+body, html {
   margin: 0;
   padding: 0;
   min-height: 100%;
   display: flex;
   flex-direction: column;
-  font-family: 'Raleway', sans-serif;
 }
 
 #root {
@@ -37,6 +36,7 @@ main {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  font-family: 'Arial', sans-serif;
   color: #ffffff;
   padding: 2.5rem 1.25rem;
   display: flex;
@@ -44,10 +44,9 @@ main {
   align-items: center;
   text-align: center;
   width: 100%;
-  height: auto;
-  margin-left: -1.22rem;
+  height: 30rem;
+  left: 0;
   margin-top: 5rem;
-  box-sizing: border-box;
 }
 
 .footer .top-section {
@@ -57,6 +56,7 @@ main {
   width: 100%;
   max-width: 75rem;
   margin-bottom: 1.25rem;
+  text-align: center;
 }
 
 .footer .left {
@@ -64,28 +64,38 @@ main {
 }
 
 #stay-fresh {
+  font-family: '';
   font-size: 3.75rem;
   margin-bottom: 0.9375rem;
-  width: 100%;
+  width: 17.125rem;
+  height: 5.25rem;
   text-align: left;
+  margin: 0;
   margin-top: 3rem;
+  margin-left: -3rem;
 }
 
 .p-left {
   font-size: 1rem;
   margin: 0.3125rem 0;
   font-family: 'Raleway';
+  font-style: normal;
   text-align: left;
+  width: 8.6875rem;
+  height: 1.5625rem;
   line-height: 1.545;
+  margin-left: -3rem;
 }
 
 .footer .links {
   display: flex;
   flex: 2;
   justify-content: space-between;
+  justify-content: end;
   gap: 4rem;
   font-family: 'Raleway';
   margin-top: 4rem;
+  margin-right: -3rem;
 }
 
 .footer .links div {
@@ -117,7 +127,8 @@ main {
   width: 90%;
   height: 0.015625rem;
   background-color: #ece57b;
-  margin: 3rem auto 1.25rem auto;
+  margin: 1.25rem auto;
+  margin-top: 3rem;
 }
 
 .footer .bottom-section {
@@ -127,88 +138,40 @@ main {
   width: 100%;
   max-width: 75rem;
   padding: 0.625rem 0;
+  text-align: center;
 }
 
 .footer .logo img {
   height: 3.75rem;
   width: auto;
+  margin-left: -3rem;
 }
 
 .footer .rights-reserved {
   font-size: 0.875rem;
   text-align: right;
+  margin-right: -3rem;
 }
 
-/* Resposividade */
-@media (max-width: 768px) {
+@media (max-width: 48rem) {
   .footer .top-section {
     flex-wrap: wrap;
     justify-content: center;
-    text-align: center;
-    gap: 2rem;
   }
 
-  #stay-fresh {
-    font-size: 2.5rem;
-    text-align: center;
-    margin: 1.5rem 0;
-  }
-
-  .p-left {
-    font-size: 0.9rem;
-    text-align: center;
-    margin: 0 auto;
-    width: 100%;
-  }
-
+  .footer .left,
   .footer .links {
-    flex-wrap: wrap;
-    gap: 1.5rem;
-    justify-content: center;
-    margin-top: 2rem;
-  }
-
-  .footer .links div {
+    flex: 1 1 100%;
     text-align: center;
-  }
-
-  .footer .divider {
-    width: 80%;
+    margin-bottom: 1.25rem;
   }
 
   .footer .bottom-section {
     flex-wrap: wrap;
-    gap: 1rem;
-    text-align: center;
-    padding: 1rem 0;
-  }
-
-  .footer .logo img {
-    margin-bottom: 1rem;
-  }
-
-  .footer .rights-reserved {
-    margin: 0;
     text-align: center;
   }
-}
 
-@media (max-width: 480px) {
-  .footer {
-    padding: 2rem 1rem;
-  }
-
-  #stay-fresh {
-    font-size: 2rem;
-  }
-
-  .footer .links {
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  .footer .bottom-section {
-    flex-direction: column;
-    gap: 1rem;
+  .footer .logo {
+    margin-bottom: 0.625rem;
   }
 }
