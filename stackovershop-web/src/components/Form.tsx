@@ -29,28 +29,6 @@ const Form = ({ onSuccess }: FormProps) => {
       .catch((error) => console.error("Erro ao buscar tipos de plantas:", error));
   }, []);
 
-  // const onSubmit = async (data: FormSchema) => {
-  //   console.log("Submitting form data:", data);
-  //   try {
-  //     const response = await axios.post(
-  //       "http://localhost:5000/plants", // arrumar depois
-  //       { ...data, labels: [data.labels] }
-  //     );
-  //     console.log("Product successfully sent to backend:", response.data);
-  //     onSuccess(response.data as FormSchema);
-  //     toast.success("Plant registered successfully!", {
-  //       icon: () => <span role="img" aria-label="plant">🌱</span>,
-  //       style: {
-  //         backgroundColor: "#354733",
-  //         color:"#fff"
-  //       }
-  //     })
-  //     reset();
-  //   } catch (error) {
-  //     console.error("Error sending product to backend:", error);
-  //   }
-  // };
-
   const onSubmit = async (data: FormSchema) => {
     console.log("Submitting form data:", data);
 
