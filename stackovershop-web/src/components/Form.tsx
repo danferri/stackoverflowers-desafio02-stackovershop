@@ -116,23 +116,6 @@ const Form = ({ onSuccess }: FormProps) => {
             <small className="error">{errors.plantType.message}</small>
           )}
         </div>
-        {/* Label (Indoor/Outdoor) */}
-        <div className="form-group">
-          <span className="form-label">Label</span>
-          <div className="form-group">
-            <label className="label-input">
-              <input type="radio" value="indoor" {...register("labels")} />
-              <span>Indoor</span>
-            </label>
-            <label className="label-input">
-              <input type="radio" value="outdoor" {...register("labels")} />
-              <span>Outdoor</span>
-            </label>
-            {errors.labels && (
-              <small className="error">{errors.labels.message}</small>
-            )}
-          </div>
-        </div>
         {/* Preço */}
         <div className="discount-group">
           <div className="form-group">
@@ -141,7 +124,7 @@ const Form = ({ onSuccess }: FormProps) => {
               className="form-input"
               type="number"
               id="price"
-              placeholder="50"
+              placeholder="$50.00"
               {...register("price", {
                 valueAsNumber: true,
               })}
@@ -157,13 +140,30 @@ const Form = ({ onSuccess }: FormProps) => {
               className="form-input"
               type="number"
               id="discountPercentage"
-              placeholder="20"
+              placeholder="20%"
               {...register("discountPercentage", {
                 valueAsNumber: true,
               })}
             />
             {errors.discountPercentage && (
               <small className="error">{errors.discountPercentage.message}</small>
+            )}
+          </div>
+        </div>
+                {/* Label (Indoor/Outdoor) */}
+                <div className="form-group">
+          <span className="form-label">Label</span>
+          <div className="form-group">
+            <label className="label-input">
+              <input type="radio" value="indoor" {...register("labels")} />
+              <span>Indoor</span>
+            </label>
+            <label className="label-input">
+              <input type="radio" value="outdoor" {...register("labels")} />
+              <span>Outdoor</span>
+            </label>
+            {errors.labels && (
+              <small className="error">{errors.labels.message}</small>
             )}
           </div>
         </div>

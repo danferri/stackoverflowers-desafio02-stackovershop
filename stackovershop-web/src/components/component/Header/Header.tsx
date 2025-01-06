@@ -1,6 +1,5 @@
-import { NavLink } from "react-router-dom";
 import PlantLogo from "../../../assets/PlantLogo.svg";
-import {SignedIn, SignedOut, SignInButton, UserButton} from "@clerk/clerk-react";
+import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/clerk-react";
 import "./HeaderStyle.css";
 
 const Header = () => {
@@ -11,17 +10,13 @@ const Header = () => {
       </section>
       <nav className="nav">
         <ul className="nav-list">
-          <NavLink to="/" className={({ isActive }: 
-          { isActive: boolean }) => isActive ? "nav-link active" : "nav-link" }>Home</NavLink>
-          <NavLink to="/register" className={({ isActive }: 
-          { isActive: boolean }) => isActive ? "nav-link active" : "nav-link" }>Register</NavLink>
-          <NavLink to="/products" className={({ isActive }: 
-          { isActive: boolean }) => isActive ? "nav-link active" : "nav-link" }>Products</NavLink>
-          <NavLink to="/about-us" className={({ isActive }: 
-          { isActive: boolean }) => isActive ? "nav-link active" : "nav-link" }>About us</NavLink>
+          <li><a href="/" className="nav-link">Home</a></li>
+          <li><a href="/register" className="nav-link">Register</a></li>
+          <li><a href="/products" className="nav-link">Products</a></li>
+          <li><a href="/about-us" className="nav-link">About us</a></li>
         </ul>
       </nav>
-        <SignedOut>
+      <SignedOut>
         <SignInButton />
       </SignedOut>
       <SignedIn>

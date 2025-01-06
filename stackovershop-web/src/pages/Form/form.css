@@ -1,166 +1,165 @@
 @font-face {
-    font-family: 'Raleway';
-    src: url('../../assets/fonts/Raleway/static/Raleway-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-  }
-  
-  @font-face {
-    font-family: 'EB Garamond';
-    src: url('../../assets/fonts/EB_Garamond/static/EBGaramond-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-  }
+  font-family: "Raleway";
+  src: url("../../assets/fonts/Raleway/static/Raleway-Regular.ttf")
+    format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "EB Garamond";
+  src: url("../../assets/fonts/EB_Garamond/static/EBGaramond-Regular.ttf")
+    format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 
 .page-container {
-    display: flex;
-    max-width: 100%;
-    margin: 0;
-    padding: 1.25rem;
-    min-height: 100vh;
-   margin-bottom: -99.6px;
+  display: flex;
+  max-width: 100%;
+  margin: 0;
+  padding: 1.25rem;
+  min-height: 100vh;
+  margin-bottom: -99.6px;
 }
-
 
 .form-container {
-    max-width: 60rem;
-    padding: 1.25rem;
-    font-family: 'Raleway';
-  
+  max-width: 60rem;
+  padding: 1.25rem;
+  font-family: "Raleway";
 }
 
-.image-container {flex-flow: column ;
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: end;
-   
-    background-image: url(../../assets/img/image-21.png);
-background-repeat: no-repeat;
-background-position: right center;
-background-size: auto;
+.image-container {
+  flex-flow: column;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  background-image: url(../../assets/img/image-21.png);
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: auto;
+  margin-right: -5rem;
 }
-.image-container img{
-    width: 100%;
-    height: 100%;
+.image-container img {
+  width: 100%;
+  height: 100%;
 }
 
-.FormTitle{color:#354733;
-    font-size: 1.2rem;
-    padding-bottom: 1rem;
-    border-bottom:#AFB2AA solid 0.07rem;
-    margin-top: 2rem;
-    font-family: 'Raleway';
+.FormTitle {
+  color: #354733;
+  font-size: 1.2rem;
+  padding-bottom: 1rem;
+  border-bottom: #afb2aa solid 0.07rem;
+  margin-top: 2rem;
+  font-family: "Raleway";
 }
 
 .form-group {
-    margin-bottom: 0.93rem;
-    position: relative;
-    font-family: 'Raleway';
+  margin-bottom: 0.93rem;
+  position: relative;
+  font-family: "Raleway";
 }
 
 .form-label {
-    display: block;
-    color: #1E1E24;
-    font-size: 0.9rem;
-    font-weight:bold;
-    margin-bottom: 5px;
+  display: block;
+  color: #1e1e24;
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin-bottom: 5px;
 }
 
-
 .form-input {
-    width: 100%;
-    padding: 0.7rem;
-    border: #AFB2AA solid 0.07rem;
-    border-radius: 0.2rem;
-    background: transparent;
-    font-family: 'Raleway';
+  width: 100%;
+  padding: 0.7rem;
+  border: #afb2aa solid 0.07rem;
+  border-radius: 0.2rem;
+  background: transparent;
+  font-family: "Raleway";
 }
 
 .description-input {
-    width: 100%;
-    min-height: 3rem;
-    min-width: 6rem;
-    padding: 0.6rem;
-    margin-top: 0.3125rem;
-    border: #AFB2AA solid 0.07rem;
-    border-radius:0.2rem ;
-    background: transparent;
-    font-family: 'Raleway';
+  width: 100%;
+  min-height: 3rem;
+  min-width: 6rem;
+  padding: 0.6rem;
+  margin-top: 0.3125rem;
+  border: #afb2aa solid 0.07rem;
+  border-radius: 0.2rem;
+  background: transparent;
+  font-family: "Raleway";
 }
 
-
-
 .discount-group {
-    display: flex;
-    gap: 2rem;
+  display: flex;
+  gap: 2rem;
 }
 
 .discount-group .form-group {
-    flex: 1;
+  flex: 1;
 }
 
 .submit-button {
-    width: 100%;
-    padding: 0.7rem;
-    background-color: #354733;
-    color: white;
-    border: none;
-    border-radius: 0.5rem;
-    cursor: pointer;
-    margin-top: 1.3rem;
-
+  width: 100%;
+  padding: 0.7rem;
+  background-color: #354733;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  margin-top: 1.3rem;
 }
 /* radio button */
 input[type="radio"] {
-    border: 0.1rem solid #AFB2AA;
-    width: 1rem;
-    height: 1rem;
-    border-radius: 50%;
-    text-align: left;  
-    margin-top: 3%;
-    margin: 1%;
-    cursor: pointer;
+  border: 0.1rem solid #afb2aa;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  text-align: left;
+  margin-top: 3%;
+  margin: 1%;
+  cursor: pointer;
 }
 
 input[type="radio"]:checked {
-    border-color: #1E1E24 ;
-    background-color: #1E1E24; 
+  border-color: #1e1e24;
+  background-color: #1e1e24;
 }
 
-
 .label-input {
-    color: #AFB2AA;
+  color: #afb2aa;
 }
 
 .label-input input[type="radio"]:checked ~ span,
 .label-input input[type="radio"]:checked {
-    color: #1E1E24;
+  color: #1e1e24;
 }
 /* radio button  termina*/
 
 .submit-button:hover {
-    background-color: #2f463b;
+  background-color: #2f463b;
 }
 
 @media (max-width: 48rem) {
-    .page-container {
-        flex-direction: column-reverse;
-    }
-    
-    .form-container {
-        max-width: 100%;
-    }
-    
-    .image-container {
-        min-height: 18.75rem;
-    }
+  .page-container {
+    flex-direction: column-reverse;
+  }
+
+  .form-container {
+    max-width: 100%;
+  }
+
+  .image-container {
+    min-height: 18.75rem;
+  }
 }
-.error{color: red;}
+.error {
+  color: red;
+}
 
-article{margin: 0;
-padding: 0;
-bottom: 0;
-width: 100%;
-
+article {
+  margin: 0;
+  padding: 0;
+  bottom: 0;
+  width: 100%;
 }

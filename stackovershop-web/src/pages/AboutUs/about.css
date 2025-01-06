@@ -8,6 +8,10 @@
   
   .user_profile {
     background-color: #354733;
+    background-image: url("../../assets/fotos/footer-image.png"); 
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center; 
     max-width: 100%;
     width: 30rem;
     height: 22rem;
@@ -20,6 +24,11 @@
     text-align: center;
     overflow: hidden;
     padding: 1.5rem;
+  }
+
+  .user_profile:hover {
+    transform: scale(1.03);
+    cursor: pointer;
   }
   
   #user_photo {
