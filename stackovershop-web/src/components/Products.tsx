@@ -44,33 +44,39 @@ const Products = () => {
 
   if (error) return <p>Erro: {error}</p>;
 
+  const PlantFeatures = ({ plant }: { plant: Plant }) => {
+    const featuresArray = plant.features.split('.').filter(feature => feature.trim() !== '');
+
+    return (
+      <ul>
+        {featuresArray.map((feature, index) => (
+          <li key={index} className="plantFeatures">{feature}.</li>
+        ))}
+      </ul>
+    );
+  };
+
   return (
     <div className="products">
       {plant && (
         <>
           <div className="PlantImage">
-            {/* Imagem da planta */}
             <img src={images[randomIndex]} alt={plant.name} className="image" />
           </div>
           <div className="PlantInfo">
-            {/* Informações da planta */}
             <div className="plantTitle">
               <h3 className="plantName">{plant.name}</h3>
               <p className="plantSub">{plant.subtitle}</p>
             </div>
             <div className="plantLabels">
               {plant.labels.map((label, index) => (
-                <p key={index} className="plantLabel">
-                  {label}
-                </p>
+                <p key={index} className="plantLabel">{label}</p>
               ))}
             </div>
             <p className="plantPrice">${plant.price}</p>
             <button id="check">Check out</button>
             <p className="features">Features</p>
-            <ul>
-              <li className="plantFeatures">{plant.features}</li>
-            </ul>
+            <PlantFeatures plant={plant} />
             <div className="plantDescription">
               <p className="description">Description</p>
               <p className="plantDescriptions">{plant.description}</p>
