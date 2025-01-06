@@ -93,7 +93,7 @@ POST
 
 /plants - To create a new plant in the database.
 
-/plants - To create a new plant type in the database.
+/plants - To create a new plant type in database.
 
 ```
 
