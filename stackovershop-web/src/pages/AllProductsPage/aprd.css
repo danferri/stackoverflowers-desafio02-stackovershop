@@ -1,84 +1,82 @@
 .products-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1rem; /* Reduzi o espaço entre os cards */
-    margin-top: rem;
-    padding: 0 1.5rem; /* Reduzi o padding */
-  }
-  
-  .products-card {
-    border: 0.0625rem solid #ddd;
-    border-radius: 0.5rem;
-    text-align: center;
-    cursor: pointer;
-    padding: 0.75rem; /* Reduzi o padding interno */
-    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
-    background-color: #fff;
-    width: 100%;
-  }
-  
-  .products-card img {
-    width: 90%;
-    height: 18rem; /* Reduzi a altura da imagem */
-    border-radius: 0.5rem;
-  }
-  
-  .products-card:hover {
-    transform: scale(1.03); /* Reduzi o efeito de hover */
-  }
-  
-  .products-info {
-    margin-top: 0.5rem; /* Reduzi a margem superior */
-    justify-content: center;
-  }
-  
-  .plants-name {
-    color: #354733;
-    font-family: 'Raleway';
-    font-size: 1rem; /* Reduzi o tamanho da fonte */
-    margin: 0.25rem 0; /* Reduzi a margem */
-    display: flex;
-    justify-content: center;
-  }
-  
-  .plants-price {
-    color: #27ae60;
-    font-weight: bold;
-    margin: 0 auto;
-    margin-top: -0.5rem;
-    font-family: 'Raleway';
-  }
-  
-  .roundeds-label {
-    background-color: #f4f4f4;
-    border-radius: 0.75rem;
-    padding: 0.2rem 0.4rem; /* Reduzi o padding dos labels */
-    font-size: 0.8rem; /* Reduzi o tamanho da fonte */
-    margin-top: 0.2rem;
-    display: inline-block;
-  }
-  
-  .labels-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.4rem; /* Reduzi o espaço entre os labels */
-    margin-top: 0.4rem;
-    margin-left: 1rem;
-  }
-  
-  .products-header {
-    margin-top: 4rem; /* Reduzi o espaço superior */
-    display: flex;
-    justify-content: center;
-  }
-  
-  h1 {
-    font-family: 'EB Garamond';
-    font-size: 2.5rem; /* Reduzi o tamanho da fonte do título */
-  }
-  
-  span {
-    color: #6c9b70;
-    font-family: 'EB Garamond';
-  }
-  
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-top: rem;
+  padding: 0 1.5rem;
+}
+
+.products-card {
+  border: 0.0625rem solid #ddd;
+  border-radius: 0.5rem;
+  text-align: center;
+  cursor: pointer;
+  padding: 0.75rem;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  width: 100%;
+}
+
+.products-card img {
+  width: 90%;
+  height: 18rem;
+  border-radius: 0.5rem;
+}
+
+.products-card:hover {
+  transform: scale(1.03);
+}
+
+.products-info {
+  margin-top: 0.5rem;
+  justify-content: center;
+}
+
+.plants-name {
+  color: #354733;
+  font-family: 'Raleway';
+  font-size: 1rem;
+  margin: 0.25rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+.plants-price {
+  color: #27ae60;
+  font-weight: bold;
+  margin: 0 auto;
+  font-family: 'Lato';
+}
+
+.roundeds-label {
+  background-color: #f4f4f4;
+  border-radius: 0.75rem;
+  padding: 0.2rem 0.4rem;
+  font-size: 0.8rem;
+  margin-top: 0.2rem;
+  display: inline-block;
+}
+
+.labels-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.4rem;
+  margin-left: 1rem;
+}
+
+.products-header {
+  margin-top: 4rem;
+  display: flex;
+  justify-content: center;
+}
+
+h1 {
+  font-family: 'EB Garamond';
+  font-size: 2.5rem;
+}
+
+span {
+  color: #6c9b70;
+  font-family: 'EB Garamond';
+}

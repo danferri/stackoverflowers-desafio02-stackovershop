@@ -12,6 +12,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Lato';
+  src: url('../../assets/fonts/Lato/Lato-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -108,8 +115,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 11.5rem;
+  width: 10rem;
   height: 3.2rem;
+  border-radius: 0rem;
 }
 
 .shop-now-button:hover {
@@ -123,6 +131,10 @@ body {
   width: auto;
   height: auto;
   margin: 0;
+}
+
+button {
+  font-family: 'Raleway';
 }
 
 .planta-verde img {
@@ -302,7 +314,7 @@ body {
   margin-top: 2rem;
   margin-bottom: 1rem;
   text-align: justify;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
 }
 
 #carrossel1 {
