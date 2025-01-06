@@ -119,8 +119,8 @@ POST
         <sub><a href="https://github.com/Arthurs08">Arthur Sbruzzi</a></sub>
       </td>
       <td align="center">
-        <img src="https://github.com/Amanda-node-js.png" width="60px;" /><br />
-        <sub><a href="https://github.com/Amanda-node-js">Amanda Amabili</a></sub>
+        <img src="https://github.com/AmandaAmabilDaSilv.png" width="60px;" /><br />
+        <sub><a href="https://github.com/AmandaAmabilDaSilv">Amanda Amabili</a></sub>
       </td>
     </tr>
   </table>
