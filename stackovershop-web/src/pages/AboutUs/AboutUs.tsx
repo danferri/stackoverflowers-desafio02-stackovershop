@@ -6,8 +6,8 @@ import cauePhoto from "../../assets/fotos/caueperfil.png";
 import danielPhoto from "../../assets/fotos/danielperfil.png";
 import pedroPhoto from "../../assets/fotos/pedroperfil.png";
 import "./about.css";
-import Header from "../../components/component/Header/Header";
-import Footer from "../../components/component/Footer/Footer";
+
+
 
 const AboutUs = () => {
   const users = [
@@ -49,8 +49,8 @@ const AboutUs = () => {
   ];
 
   return (
-    <div>
-      <Header />
+    <>
+
       <Description />
       <div id="users">
         {users.map((user, index) => (
@@ -64,8 +64,8 @@ const AboutUs = () => {
           />
         ))}
       </div>
-      <Footer />
-    </div>
+     
+    </>
   );
 };
 

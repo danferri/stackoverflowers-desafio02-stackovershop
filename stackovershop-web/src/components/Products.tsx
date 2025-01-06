@@ -18,7 +18,7 @@ interface Plant {
   features: string;
   description: string;
   imgUrl: string;
-  plantType: string;
+
 }
 
 const Products = () => {

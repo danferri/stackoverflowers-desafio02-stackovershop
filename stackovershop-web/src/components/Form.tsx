@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { useForms } from "../hooks/useForms";
 import { FormSchema } from "../schemas/formSchema";
-import imgPlant from '../assets/img/image-21.png';
 import axios from "axios";
 import '../pages/Form/form.css';
 import { ToastContainer, toast } from "react-toastify";
@@ -218,7 +217,8 @@ const Form = ({ onSuccess }: FormProps) => {
       </form>
       <ToastContainer position="bottom-left" autoClose={5000} />
       <aside className="image-container">
-        <img src={imgPlant} alt="Plant illustration" />
+        {/* <img src={imgPlant} alt="Plant illustration" /> */}
+     
       </aside>
     </section>
   );

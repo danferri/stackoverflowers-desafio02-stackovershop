@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client'; 
 import AppRoutes from './routes';
 import { ClerkProvider } from '@clerk/clerk-react';
+import './index.css';
 
 const container = document.getElementById('root');
 
