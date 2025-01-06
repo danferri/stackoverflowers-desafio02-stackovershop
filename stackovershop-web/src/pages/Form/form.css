@@ -24,6 +24,7 @@
 .form-container {
     max-width: 60rem;
     padding: 1.25rem;
+    font-family: 'Raleway';
 }
 
 .image-container {
@@ -44,6 +45,7 @@
 .form-group {
     margin-bottom: 0.93rem;
     position: relative;
+    font-family: 'Raleway';
 }
 
 .form-label {
