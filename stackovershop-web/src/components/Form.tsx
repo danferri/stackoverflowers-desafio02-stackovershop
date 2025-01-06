@@ -29,23 +29,58 @@ const Form = ({ onSuccess }: FormProps) => {
       .catch((error) => console.error("Erro ao buscar tipos de plantas:", error));
   }, []);
 
+  // const onSubmit = async (data: FormSchema) => {
+  //   console.log("Submitting form data:", data);
+  //   try {
+  //     const response = await axios.post(
+  //       "http://localhost:5000/plants", // arrumar depois
+  //       { ...data, labels: [data.labels] }
+  //     );
+  //     console.log("Product successfully sent to backend:", response.data);
+  //     onSuccess(response.data as FormSchema);
+  //     toast.success("Plant registered successfully!", {
+  //       icon: () => <span role="img" aria-label="plant">🌱</span>,
+  //       style: {
+  //         backgroundColor: "#354733",
+  //         color:"#fff"
+  //       }
+  //     })
+  //     reset();
+  //   } catch (error) {
+  //     console.error("Error sending product to backend:", error);
+  //   }
+  // };
+
   const onSubmit = async (data: FormSchema) => {
     console.log("Submitting form data:", data);
+
     try {
+      const selectedPlantType = plantTypes.find((type) => type.id === data.plantType)?.plantType;
+
+      if (!selectedPlantType) {
+        toast.error("Please select a valid Plant Type.");
+        return;
+      }
+
+      const currentLabels = Array.isArray(data.labels) ? data.labels : [data.labels];
+      const updatedLabels = [...currentLabels, selectedPlantType];
+
       const response = await axios.post(
-        "http://localhost:5000/plants", // arrumar depois
-        { ...data, labels: [data.labels] }
+        "http://localhost:5000/plants",
+        { ...data, labels: updatedLabels }
       );
       console.log("Product successfully sent to backend:", response.data);
+
       onSuccess(response.data as FormSchema);
       toast.success("Plant registered successfully!", {
         icon: () => <span role="img" aria-label="plant">🌱</span>,
         style: {
           backgroundColor: "#354733",
-          color:"#fff"
-        }
-      })
+          color: "#fff",
+        },
+      });
       reset();
+      
     } catch (error) {
       console.error("Error sending product to backend:", error);
     }
@@ -203,7 +238,7 @@ const Form = ({ onSuccess }: FormProps) => {
           Register
         </button>
       </form>
-      <ToastContainer position="bottom-left" autoClose={5000}/>
+      <ToastContainer position="bottom-left" autoClose={5000} />
       <aside className="image-container">
         <img src={imgPlant} alt="Plant illustration" />
       </aside>
